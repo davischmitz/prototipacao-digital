@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.xst" -ofn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.syr" 

@@ -21,8 +21,68 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="controle_tanque.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="controle_tanque.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="controle_tanque.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="controle_tanque.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="controle_tanque.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controle_tanque.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="controle_tanque.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="controle_tanque.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="controle_tanque.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="controle_tanque_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controle_tanque_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="controle_tanque_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8793325999717262030" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4957645470235724844" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5145052112819647220" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7273858994868173150" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039195" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8588906331107239247" xil_pn:start_ts="1619039186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="controle_tanque.lso"/>
+      <outfile xil_pn:name="controle_tanque.ngc"/>
+      <outfile xil_pn:name="controle_tanque.ngr"/>
+      <outfile xil_pn:name="controle_tanque.prj"/>
+      <outfile xil_pn:name="controle_tanque.stx"/>
+      <outfile xil_pn:name="controle_tanque.syr"/>
+      <outfile xil_pn:name="controle_tanque.xst"/>
+      <outfile xil_pn:name="controle_tanque_vhdl.prj"/>
+      <outfile xil_pn:name="controle_tanque_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
 
 </generated_project>
