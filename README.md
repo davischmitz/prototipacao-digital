@@ -23,3 +23,9 @@ Tabela verdade de 4 entradas e 4 saídas
 
 ### Mapas de Karnaugh
 ![karnaugh](Karnaugh.jpeg)
+
+### Circuito válvula de entrada e aquecedor
+![ventrada](ckt_ventrada_h.jpeg)
+
+### Circuito válvula de saída e alarme
+![vsaida](ckt_vsaida_a.png)
