@@ -20,3 +20,6 @@ Tabela verdade de 4 entradas e 4 saídas
 |  1    | 1     | 0     | 1     | 0         | 0       | 1     | 0     |
 |  1    | 1     | 1     | 0     | 0         | 0       | 0     | 1     |
 |  1    | 1     | 1     | 1     | 0         | 0       | 0     | 1     |
+
+### Mapas de Karnaugh
+![karnaugh](Karnaugh.jpeg)
