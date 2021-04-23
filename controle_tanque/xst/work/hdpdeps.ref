@@ -1,9 +1,9 @@
 V3 3
-FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.vhd" 2021/04/23.12:31:57 P.20131013
-EN work/controle_tanque 1619191922 \
+FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.vhd" 2021/04/23.17:35:46 P.20131013
+EN work/controle_tanque 1619210164 \
       FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/controle_tanque/controle_tanque 1619191923 \
+AR work/controle_tanque/controle_tanque 1619210165 \
       FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque.vhd" \
-      EN work/controle_tanque 1619191922
+      EN work/controle_tanque 1619210164
