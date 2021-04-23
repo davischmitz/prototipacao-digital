@@ -27,7 +27,9 @@ entity controle_tanque is
     Ll: IN std_logic;
     Th: IN std_logic;
     Tc: IN std_logic;
+    Ve: OUT std_logic;
     Vs: OUT std_logic;
+    H: OUT std_logic;
     A: OUT std_logic
   );
 end controle_tanque;
@@ -60,6 +62,12 @@ architecture controle_tanque of controle_tanque is
   signal aux3_s: std_logic := '0';
   signal aux4_s: std_logic := '0';
   signal aux5_s: std_logic := '0';
+  signal aux6_s: std_logic := '0';
+  signal aux7_s: std_logic := '0';
+  signal aux8_s: std_logic := '0';
+  signal aux9_s: std_logic := '0';
+  signal aux10_s: std_logic := '0';
+  signal aux11_s: std_logic := '0';
 
  	------------------
 	-- Port Mapping --
@@ -82,6 +90,14 @@ begin
     aux4_s <= not Ll;
     aux5_s <= aux4_s and Lh;
     A <= aux5_s or Th;
+    aux6_s <= NOT Lh; -- /Lh
+	 aux7_s <= NOT Tc; -- /Tc
+	 aux8_s <= NOT Th; -- /Th
+	 aux9_s <= aux7_s OR aux8_s; -- /Tc + /Th
+	 Ve <= aux6_s AND aux9_s; -- /Lh (/Tc + /Th)
+	 aux10_s <= Ll OR aux6_s; --LI + /Lh
+	 aux11_s <= aux8_s AND Tc; --/Th.Tc
+	 H <= aux11_s AND aux10_s;
   end process;
 	
 end controle_tanque;

@@ -56,6 +56,10 @@
     <transform xil_pn:end_ts="1619045353" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1619045353">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_tanque.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1619039680" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5145052112819647220" xil_pn:start_ts="1619039680">
@@ -73,11 +77,21 @@
     <transform xil_pn:end_ts="1619045356" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1619045356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_tanque.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1619045359" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2029426202300415383" xil_pn:start_ts="1619045356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_tanque_beh.prj"/>
       <outfile xil_pn:name="controle_tanque_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -88,6 +102,9 @@
     <transform xil_pn:end_ts="1619045360" xil_pn:in_ck="-1670785881187758206" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3422880706147658820" xil_pn:start_ts="1619045359">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_tanque_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -120,11 +137,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619045281" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8588906331107239247" xil_pn:start_ts="1619045274">
+    <transform xil_pn:end_ts="1619191928" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8588906331107239247" xil_pn:start_ts="1619191919">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="controle_tanque.lso"/>
       <outfile xil_pn:name="controle_tanque.ngc"/>
