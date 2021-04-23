@@ -31,14 +31,67 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="controle_tanque.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="controle_tanque.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="controle_tanque.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controle_tanque_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="controle_tanque_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="controle_tanque_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="controle_tanque_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controle_tanque_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="controle_tanque_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controle_tanque_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="controle_tanque_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1619039680" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1619039680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619045353" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1619045353">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="controle_tanque.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039680" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5145052112819647220" xil_pn:start_ts="1619039680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039680" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3129358954438346254" xil_pn:start_ts="1619039680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619039680" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4957645470235724844" xil_pn:start_ts="1619039680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1619045356" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1619045356">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="controle_tanque.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1619045359" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2029426202300415383" xil_pn:start_ts="1619045356">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="controle_tanque_beh.prj"/>
+      <outfile xil_pn:name="controle_tanque_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1619045360" xil_pn:in_ck="-1670785881187758206" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3422880706147658820" xil_pn:start_ts="1619045359">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="controle_tanque_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
     <transform xil_pn:end_ts="1619039186" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1619039186">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -67,9 +120,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619039195" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8588906331107239247" xil_pn:start_ts="1619039186">
+    <transform xil_pn:end_ts="1619045281" xil_pn:in_ck="3121360698480193347" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8588906331107239247" xil_pn:start_ts="1619045274">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="controle_tanque.lso"/>
       <outfile xil_pn:name="controle_tanque.ngc"/>
@@ -78,6 +133,8 @@
       <outfile xil_pn:name="controle_tanque.stx"/>
       <outfile xil_pn:name="controle_tanque.syr"/>
       <outfile xil_pn:name="controle_tanque.xst"/>
+      <outfile xil_pn:name="controle_tanque_beh.prj"/>
+      <outfile xil_pn:name="controle_tanque_stx_beh.prj"/>
       <outfile xil_pn:name="controle_tanque_vhdl.prj"/>
       <outfile xil_pn:name="controle_tanque_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque_isim_beh.exe" -prj "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/controle_tanque/controle_tanque_beh.prj" "controle_tanque" 
