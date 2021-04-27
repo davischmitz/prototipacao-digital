@@ -1,9 +1,9 @@
-V3 3
+V3 4
 FL C:/unisinos/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd 2021/04/23.20:54:28 P.20131013
-EN work/semaforo 1619222076 \
-      FL C:/unisinos/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/semaforo/semaforo 1619222077 \
-      FL C:/unisinos/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd \
-      EN work/semaforo 1619222076
+FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd" 2021/04/27.11:51:01 P.20131013
+EN work/semaforo 1619535064 \
+      FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/semaforo/semaforo 1619535065 \
+      FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Atividade_2_Semaforo/semaforo/semaforo.vhd" \
+      EN work/semaforo 1619535064
