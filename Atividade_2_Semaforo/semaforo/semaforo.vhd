@@ -70,19 +70,19 @@ begin
 	-----------------------------
 	-- Asynchronous assignments --
 	-----------------------------
-  so1 <= not S1 and not S0;
-  so2 <= not S1 and S0;
-  so3 <= S1 and S0;
-  so4 <= S1 and not S0;
+  so1 <= not S1 and not S0; -- /S1 * /S0
+  so2 <= not S1 and S0;     -- /S1 * SO
+  so3 <= S1 and S0;         -- S1 * S0
+  so4 <= S1 and not S0;     -- S1 * /S0
 
-  MR <= so3 or so4;
-  MY <= so2;
-  MG <= so1;
-  SR <= so1 or so2;
-  SY <= so4;
-  SG <= so3;
-  TL <= so1 or so3;
-  TS <= so2 or so4;
+  MR <= so3 or so4; 	       -- (S1 * S0) + (S1 * /S0)
+  MY <= so2;                -- /S1 * SO
+  MG <= so1;                -- /S1 * /S0
+  SR <= so1 or so2;         -- (/S1 * /S0) + (/S1 * SO)
+  SY <= so4;                -- S1 * /S0
+  SG <= so3;                -- S1 * S0
+  TL <= so1 or so3;         -- (/S1 * /S0) +  (S1 * S0)
+  TS <= so2 or so4;         -- (/S1 * SO) + (S1 * /S0)
   ---------------
 	--  Process  --
 	---------------
