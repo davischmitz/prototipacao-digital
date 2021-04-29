@@ -50,6 +50,10 @@
     <transform xil_pn:end_ts="1619535737" xil_pn:in_ck="5972231495055060940" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1619535737">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="semaforo.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1619222072" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1619222072">
@@ -83,6 +87,8 @@
     <transform xil_pn:end_ts="1619535068" xil_pn:in_ck="5972231495055060940" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-2763543441168063229" xil_pn:start_ts="1619535062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="semaforo.lso"/>
       <outfile xil_pn:name="semaforo.ngc"/>
