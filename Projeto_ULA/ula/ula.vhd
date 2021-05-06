@@ -62,10 +62,10 @@ architecture ula of ula is
 	signal s_b1: std_logic :='0';
 	signal s_b2: std_logic :='0';
 	signal s_b3: std_logic :='0';
-	signal s_soma0: std_logic_vector(1 downto 0):="00";
-	signal s_soma1: std_logic_vector(1 downto 0):="00";
-	signal s_soma2: std_logic_vector(1 downto 0):="00";
-	signal s_soma3: std_logic_vector(1 downto 0):="00";
+	signal s_aux0: std_logic_vector(1 downto 0):="00"; --2 bits devido a saída + cout concatenados
+	signal s_aux1: std_logic_vector(1 downto 0):="00";
+	signal s_aux2: std_logic_vector(1 downto 0):="00";
+	signal s_aux3: std_logic_vector(1 downto 0):="00";
  	------------------
 	-- Port Mapping --
 	------------------
@@ -78,16 +78,16 @@ begin
 	s_b2 <= b(2) xor C_in;
 	s_b3 <= b(3) xor C_in;
 	
-	s_soma0 <= ("0"&A(0 downto 0)) + ("0"&s_b0) + ("0"&C_in);
-	s_soma1 <= ("0"&A(1 downto 1)) + ("0"&s_b1) + ("0"&s_soma0(1));
-	s_soma2 <= ("0"&A(2 downto 2)) + ("0"&s_b2) + ("0"&s_soma1(1));
-	s_soma3 <= ("0"&A(3 downto 3)) + ("0"&s_b3) + ("0"&s_soma2(1));
+	s_aux0 <= ("0"&A(0 downto 0)) + ("0"&s_b0) + ("0"&C_in);
+	s_aux1 <= ("0"&A(1 downto 1)) + ("0"&s_b1) + ("0"&s_aux0(1));
+	s_aux2 <= ("0"&A(2 downto 2)) + ("0"&s_b2) + ("0"&s_aux1(1));
+	s_aux3 <= ("0"&A(3 downto 3)) + ("0"&s_b3) + ("0"&s_aux2(1));
 	
-	s(0) <= s_soma0(0);
-	s(1) <= s_soma1(0);
-	s(2) <= s_soma2(0);
-	s(3) <= s_soma3(0);
-	s(4)	<= s_soma3(1) xor C_in;
+	s(0) <= s_aux0(0);
+	s(1) <= s_aux1(0);
+	s(2) <= s_aux2(0);
+	s(3) <= s_aux3(0);
+	s(4)	<= s_aux3(1) xor C_in;
   ---------------
 	--  Process  --
 	---------------
