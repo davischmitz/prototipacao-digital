@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.29 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.29 secs
  
 --> Reading design: ula.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -129,17 +129,35 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <ula>.
     Related source file is "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd".
-WARNING:Xst:1306 - Output <ULA_output> is never assigned.
-WARNING:Xst:647 - Input <A> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <op_code> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <C_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <S<8:5>> is never assigned.
+    Found 1-bit xor2 for signal <S<4>>.
+    Found 1-bit xor2 for signal <s_b0>.
+    Found 1-bit xor2 for signal <s_b1>.
+    Found 1-bit xor2 for signal <s_b2>.
+    Found 1-bit xor2 for signal <s_b3>.
+    Found 2-bit adder for signal <s_soma0>.
+    Found 2-bit adder for signal <s_soma0$addsub0000> created at line 81.
+    Found 2-bit adder for signal <s_soma1>.
+    Found 2-bit adder for signal <s_soma1$addsub0000> created at line 82.
+    Found 2-bit adder for signal <s_soma2>.
+    Found 2-bit adder for signal <s_soma2$addsub0000> created at line 83.
+    Found 2-bit adder for signal <s_soma3>.
+    Found 2-bit adder for signal <s_soma3$addsub0000> created at line 84.
+    Summary:
+	inferred   8 Adder/Subtractor(s).
 Unit <ula> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 2-bit adder                                           : 8
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
+
 =========================================================================
 
 =========================================================================
@@ -150,7 +168,12 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 2-bit adder carry in                                  : 4
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
+
 =========================================================================
 
 =========================================================================
@@ -193,9 +216,16 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 28
+# IOs                              : 19
 
 Cell Usage :
+# BELS                             : 11
+#      LUT2                        : 1
+#      LUT4                        : 8
+#      MUXF5                       : 2
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
 =========================================================================
 
 Device utilization summary:
@@ -203,9 +233,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                        0  out of   4656     0%  
- Number of IOs:                          28
- Number of bonded IOBs:                   0  out of    232     0%  
+ Number of Slices:                        5  out of   4656     0%  
+ Number of 4 input LUTs:                  9  out of   9312     0%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  14  out of    232     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -238,23 +269,45 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 9.113ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 53 / 5
+-------------------------------------------------------------------------
+Delay:               9.113ns (Levels of Logic = 6)
+  Source:            A<1> (PAD)
+  Destination:       S<4> (PAD)
+
+  Data Path: A<1> to S<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.762  A_1_IBUF (A_1_IBUF)
+     LUT4:I0->O            1   0.704   0.000  Madd_s_soma1_Madd_cy<0>11 (Madd_s_soma1_Madd_cy<0>1)
+     MUXF5:I1->O           2   0.321   0.526  Madd_s_soma1_Madd_cy<0>1_f5 (Madd_s_soma1_Madd_cy<0>)
+     LUT4:I1->O            2   0.704   0.482  Madd_s_soma2_Madd_cy<0>11 (Madd_s_soma2_Madd_cy<0>)
+     LUT4:I2->O            1   0.704   0.420  Mxor_S<4>_Result1 (S_4_OBUF)
+     OBUF:I->O                 3.272          S_4_OBUF (S<4>)
+    ----------------------------------------
+    Total                      9.113ns (6.923ns logic, 2.190ns route)
+                                       (76.0% logic, 24.0% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.87 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.26 secs
  
 --> 
 
-Total memory usage is 4497116 kilobytes
+Total memory usage is 4497168 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

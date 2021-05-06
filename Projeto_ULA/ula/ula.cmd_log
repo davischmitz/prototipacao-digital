@@ -1,3 +1,10 @@
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
+vhdtdtfi -lib work ula.vhd -prj ula -o ula.spl -module ula -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ula.spl C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.sym 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 ula.ngc ula.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o ula_map.ncd ula.ngd ula.pcf 
+par -w -intstyle ise -ol high -t 1 ula_map.ncd ula.ncd ula.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ula.twx ula.ncd -o ula.twr ula.pcf 

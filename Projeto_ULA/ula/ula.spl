@@ -1,0 +1,8 @@
+[Inputs]
+C_in
+C_out
+=A[3:0]=
+=B[3:0]=
+[Outputs]
+=S[8:0]=
+[BiDir]

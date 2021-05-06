@@ -54,10 +54,18 @@ architecture ula of ula is
 	-----------------------------------
 	-- Statments of signals
 	-----------------------------------
-	  signal aux1_s: std_logic := '0';
-	  signal aux2_s: std_logic := '0';
-	  signal aux3_s: std_logic := '0';
-	  signal aux4_s: std_logic := '0';
+	  --signal aux1_s: std_logic := '0';
+	  --signal aux2_s: std_logic := '0';
+	  --signal aux3_s: std_logic := '0';
+	  --signal aux4_s: std_logic := '0';
+	signal s_b0: std_logic :='0';
+	signal s_b1: std_logic :='0';
+	signal s_b2: std_logic :='0';
+	signal s_b3: std_logic :='0';
+	signal s_soma0: std_logic_vector(1 downto 0):="00";
+	signal s_soma1: std_logic_vector(1 downto 0):="00";
+	signal s_soma2: std_logic_vector(1 downto 0):="00";
+	signal s_soma3: std_logic_vector(1 downto 0):="00";
  	------------------
 	-- Port Mapping --
 	------------------
