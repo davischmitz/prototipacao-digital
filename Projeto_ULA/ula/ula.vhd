@@ -23,10 +23,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL; --para trabalhar com numeros sem sinal
 
 entity ula is
 	port (
-		A           :	IN  std_logic_vector(7 downto 0);		-- Entrada 8 bits sinal A
-		B           :	IN  std_logic_vector(7 downto 0);		-- Entrada 8 bits sinal B
-		op_code     :	IN  std_logic_vector(2 downto 0);      -- Entrada da operação a ser realizada
-		ULA_output	:	OUT std_logic_vector(8 downto 0)	      -- Saida tem um bit a mais devido ao overflow
+		A           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal A
+		B           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal B
+      C_in        :	IN std_logic;	                   	   -- Entrada 1 bit para fazer a seleção entre Adder e And
+		C_out       :	IN std_logic;                  	      -- Saida
+		S         	:	OUT std_logic_vector(8 downto 0)	      -- Saida tem um bit a mais devido ao overflow
   );
 end ula;
 
@@ -53,7 +54,10 @@ architecture ula of ula is
 	-----------------------------------
 	-- Statments of signals
 	-----------------------------------
-
+	  signal aux1_s: std_logic := '0';
+	  signal aux2_s: std_logic := '0';
+	  signal aux3_s: std_logic := '0';
+	  signal aux4_s: std_logic := '0';
  	------------------
 	-- Port Mapping --
 	------------------
@@ -61,20 +65,25 @@ begin
 	-----------------------------
 	-- Asynchronous assignments --
 	-----------------------------
-
+	s_b0 <= b(0) xor C_in;
+	s_b1 <= b(1) xor C_in;
+	s_b2 <= b(2) xor C_in;
+	s_b3 <= b(3) xor C_in;
+	
+	s_soma0 <= ("0"&A(0 downto 0)) + ("0"&s_b0) + ("0"&C_in);
+	s_soma1 <= ("0"&A(1 downto 1)) + ("0"&s_b1) + ("0"&s_soma0(1));
+	s_soma2 <= ("0"&A(2 downto 2)) + ("0"&s_b2) + ("0"&s_soma1(1));
+	s_soma3 <= ("0"&A(3 downto 3)) + ("0"&s_b3) + ("0"&s_soma2(1));
+	
+	s(0) <= s_soma0(0);
+	s(1) <= s_soma1(0);
+	s(2) <= s_soma2(0);
+	s(3) <= s_soma3(0);
+	s(4)	<= s_soma3(1) xor C_in;
   ---------------
 	--  Process  --
 	---------------
-	process (A, B)
-	begin
-		--case op_code is
-            --when "000" =>	
-				--when "001" =>	
-				--when "010" =>		
-				--when "011" =>  
-				--when "100" =>   	
-		--end case;
-	end process;
+
 	--up_edge
 	
 end ula;
