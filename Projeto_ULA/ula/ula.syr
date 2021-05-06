@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
  
 --> Reading design: ula.prj
 
@@ -132,18 +132,18 @@ Synthesizing Unit <ula>.
 WARNING:Xst:647 - Input <C_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1306 - Output <S<8:5>> is never assigned.
     Found 1-bit xor2 for signal <S<4>>.
+    Found 2-bit adder for signal <s_aux0>.
+    Found 2-bit adder for signal <s_aux0$addsub0000> created at line 81.
+    Found 2-bit adder for signal <s_aux1>.
+    Found 2-bit adder for signal <s_aux1$addsub0000> created at line 82.
+    Found 2-bit adder for signal <s_aux2>.
+    Found 2-bit adder for signal <s_aux2$addsub0000> created at line 83.
+    Found 2-bit adder for signal <s_aux3>.
+    Found 2-bit adder for signal <s_aux3$addsub0000> created at line 84.
     Found 1-bit xor2 for signal <s_b0>.
     Found 1-bit xor2 for signal <s_b1>.
     Found 1-bit xor2 for signal <s_b2>.
     Found 1-bit xor2 for signal <s_b3>.
-    Found 2-bit adder for signal <s_soma0>.
-    Found 2-bit adder for signal <s_soma0$addsub0000> created at line 81.
-    Found 2-bit adder for signal <s_soma1>.
-    Found 2-bit adder for signal <s_soma1$addsub0000> created at line 82.
-    Found 2-bit adder for signal <s_soma2>.
-    Found 2-bit adder for signal <s_soma2$addsub0000> created at line 83.
-    Found 2-bit adder for signal <s_soma3>.
-    Found 2-bit adder for signal <s_soma3$addsub0000> created at line 84.
     Summary:
 	inferred   8 Adder/Subtractor(s).
 Unit <ula> synthesized.
@@ -288,9 +288,9 @@ Delay:               9.113ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.218   0.762  A_1_IBUF (A_1_IBUF)
-     LUT4:I0->O            1   0.704   0.000  Madd_s_soma1_Madd_cy<0>11 (Madd_s_soma1_Madd_cy<0>1)
-     MUXF5:I1->O           2   0.321   0.526  Madd_s_soma1_Madd_cy<0>1_f5 (Madd_s_soma1_Madd_cy<0>)
-     LUT4:I1->O            2   0.704   0.482  Madd_s_soma2_Madd_cy<0>11 (Madd_s_soma2_Madd_cy<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd_s_aux1_Madd_cy<0>11 (Madd_s_aux1_Madd_cy<0>1)
+     MUXF5:I1->O           2   0.321   0.526  Madd_s_aux1_Madd_cy<0>1_f5 (Madd_s_aux1_Madd_cy<0>)
+     LUT4:I1->O            2   0.704   0.482  Madd_s_aux2_Madd_cy<0>11 (Madd_s_aux2_Madd_cy<0>)
      LUT4:I2->O            1   0.704   0.420  Mxor_S<4>_Result1 (S_4_OBUF)
      OBUF:I->O                 3.272          S_4_OBUF (S<4>)
     ----------------------------------------
@@ -300,12 +300,12 @@ Delay:               9.113ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.26 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.73 secs
  
 --> 
 
-Total memory usage is 4497168 kilobytes
+Total memory usage is 4497088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
