@@ -8,9 +8,7 @@
 -- DEPENDENCIES : 
 -------------------------------------------------------------------------------
 --Cin para a selecao entre as operacoes de soma e subtracao (para 0, o circuito soma, para 1 subtrai fazendo o complemento de 2 da entrada B)
---MUX para controlar se a saï¿½da serï¿½ a do somador ou a do bloco AND
---Multiplexador de 4 entradas, pois cada bit da saï¿½da poderï¿½ ser gerado a partir do mï¿½dulo somador, subtrator ou AND
---Seletor de 2 bits
+--MUX para controlar se a saida sera do somador ou a do bloco AND
 -------------------------------------------------------------------------------
 -- LIBRARY
 -------------------------------------------------------------------------------
@@ -29,7 +27,7 @@ entity ula is
 		A           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal A
 		B           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal B
 		C_in        :	IN std_logic;	                   	   -- Entrada seletora de 1 bit para fazer a selecao entre soma e subtracao
-		MuxSel      :	IN std_logic;
+		MuxSel      :	IN std_logic;                          -- Entrada seletora de 1 bit para fazer a selecao entre o bloco somador e AND
 		S         	:	OUT std_logic_vector(4 downto 0)	      -- Saida de 5 bits, 4 de dados + 1 bit de carry out
   );
 end ula;
@@ -104,7 +102,7 @@ begin
 		elsif MuxSel = '1' then
 			S <= s_and;
 		else 
-			S <= "00000"; --no caso do mux atual que possui so um bit nao sera utilizado
+			S <= "00000"; --Valor default caso nenhuma opção seja válida. No caso do mux atual que possui so um bit nao sera utilizado
 		end if;
 	end process;
 	--up_edge
