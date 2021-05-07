@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.27 secs
  
 --> Reading design: ula.prj
 
@@ -104,7 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/ula is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd", and is now defined in "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd".
+WARNING:HDLParsers:3607 - Unit work/ula/ula is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd", and is now defined in "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd".
+Compiling vhdl file "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" in Library work.
 Entity <ula> compiled.
 Entity <ula> (Architecture <ula>) compiled.
 
@@ -128,20 +130,20 @@ Entity <ula> analyzed. Unit <ula> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ula>.
-    Related source file is "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd".
-    Found 1-bit xor2 for signal <S<4>>.
+    Related source file is "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd".
     Found 1-bit xor2 for signal <s_b0>.
     Found 1-bit xor2 for signal <s_b1>.
     Found 1-bit xor2 for signal <s_b2>.
     Found 1-bit xor2 for signal <s_b3>.
+    Found 1-bit xor2 for signal <s_soma<4>>.
     Found 2-bit adder for signal <s_soma0>.
-    Found 2-bit adder for signal <s_soma0$addsub0000> created at line 78.
+    Found 2-bit adder for signal <s_soma0$addsub0000> created at line 84.
     Found 2-bit adder for signal <s_soma1>.
-    Found 2-bit adder for signal <s_soma1$addsub0000> created at line 79.
+    Found 2-bit adder for signal <s_soma1$addsub0000> created at line 85.
     Found 2-bit adder for signal <s_soma2>.
-    Found 2-bit adder for signal <s_soma2$addsub0000> created at line 80.
+    Found 2-bit adder for signal <s_soma2$addsub0000> created at line 86.
     Found 2-bit adder for signal <s_soma3>.
-    Found 2-bit adder for signal <s_soma3$addsub0000> created at line 81.
+    Found 2-bit adder for signal <s_soma3$addsub0000> created at line 87.
     Summary:
 	inferred   8 Adder/Subtractor(s).
 Unit <ula> synthesized.
@@ -214,15 +216,16 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 14
+# IOs                              : 15
 
 Cell Usage :
-# BELS                             : 11
-#      LUT2                        : 1
+# BELS                             : 13
+#      GND                         : 1
+#      LUT3                        : 3
 #      LUT4                        : 8
-#      MUXF5                       : 2
-# IO Buffers                       : 14
-#      IBUF                        : 9
+#      MUXF5                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 10
 #      OBUF                        : 5
 =========================================================================
 
@@ -231,10 +234,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                        5  out of   4656     0%  
- Number of 4 input LUTs:                  9  out of   9312     0%  
- Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    232     6%  
+ Number of Slices:                        7  out of   4656     0%  
+ Number of 4 input LUTs:                 11  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -267,7 +270,7 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 9.113ns
+   Maximum combinational path delay: 10.297ns
 
 Timing Detail:
 --------------
@@ -275,37 +278,38 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 53 / 5
+  Total number of paths / destination ports: 43 / 5
 -------------------------------------------------------------------------
-Delay:               9.113ns (Levels of Logic = 6)
-  Source:            A<1> (PAD)
+Delay:               10.297ns (Levels of Logic = 7)
+  Source:            C_in (PAD)
   Destination:       S<4> (PAD)
 
-  Data Path: A<1> to S<4>
+  Data Path: C_in to S<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.218   0.762  A_1_IBUF (A_1_IBUF)
-     LUT4:I0->O            1   0.704   0.000  Madd_s_soma1_Madd_cy<0>11 (Madd_s_soma1_Madd_cy<0>1)
-     MUXF5:I1->O           2   0.321   0.526  Madd_s_soma1_Madd_cy<0>1_f5 (Madd_s_soma1_Madd_cy<0>)
-     LUT4:I1->O            2   0.704   0.482  Madd_s_soma2_Madd_cy<0>11 (Madd_s_soma2_Madd_cy<0>)
-     LUT4:I2->O            1   0.704   0.420  Mxor_S<4>_Result1 (S_4_OBUF)
+     IBUF:I->O             7   1.218   0.743  C_in_IBUF (C_in_IBUF)
+     LUT3:I2->O            2   0.704   0.526  S<1>_SW0 (N3)
+     LUT4:I1->O            2   0.704   0.526  Madd_s_soma1_Madd_cy<0>1 (Madd_s_soma1_Madd_cy<0>)
+     LUT4:I1->O            1   0.704   0.455  Madd_s_soma2_Madd_cy<0>11 (Madd_s_soma2_Madd_cy<0>)
+     LUT4:I2->O            1   0.704   0.000  S<4>1 (S<4>1)
+     MUXF5:I0->O           1   0.321   0.420  S<4>_f5 (S_4_OBUF)
      OBUF:I->O                 3.272          S_4_OBUF (S<4>)
     ----------------------------------------
-    Total                      9.113ns (6.923ns logic, 2.190ns route)
-                                       (76.0% logic, 24.0% route)
+    Total                     10.297ns (7.627ns logic, 2.670ns route)
+                                       (74.1% logic, 25.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.66 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.88 secs
  
 --> 
 
-Total memory usage is 4497108 kilobytes
+Total memory usage is 4513960 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

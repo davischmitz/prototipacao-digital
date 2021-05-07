@@ -10,3 +10,4 @@ par -w -intstyle ise -ol high -t 1 ula_map.ncd ula.ncd ula.pcf
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ula.twx ula.ncd -o ula.twr ula.pcf 
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
+xst -intstyle ise -ifn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 

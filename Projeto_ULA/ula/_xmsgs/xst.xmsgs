@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ula</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ula/ula</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd</arg>&quot;.
+</msg>
+
 </messages>
 

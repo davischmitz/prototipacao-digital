@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\unisinos\prototipacao-digital-ga-1\Projeto_ULA\ula\ula_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula_isim_beh.wdb 
+Running: D:\Prototipacao Digital\GA\Atividade 1\prototipacao-digital-ga-1\Projeto_ULA\ula\ula_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,4 +12,27 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /ula/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-# run 100ns
+# restart
+# isim force add /ula/a 1010 -radix bin -cancel 50 ns
+# isim force add /ula/b 0011 -radix bin -cancel 50 ns
+# isim force add /ula/c_in 0 -radix bin -cancel 50 ns
+# isim force add /ula/muxsel 0 -radix bin -cancel 50 ns
+# run 50ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /ula/a 1000 -radix bin -cancel 50 ns
+# isim force add /ula/b 0111 -radix bin -cancel 50 ns
+# isim force add /ula/c_in 1 -radix bin -cancel 50 ns
+# isim force add /ula/muxsel 0 -radix bin -cancel 50 ns
+# run 50ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /ula/a 1100 -radix bin -cancel 50 ns
+# isim force add /ula/b 1010 -radix bin -cancel 50 ns
+# isim force add /ula/c_in 0 -radix bin -cancel 50 ns
+# isim force add /ula/muxsel 1 -radix bin -cancel 50 ns
+# run 50ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
