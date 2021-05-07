@@ -1,10 +1,10 @@
 V3 4
-FL C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd 2021/05/06.21:48:07 P.20131013
-FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" 2021/05/07.12:46:04 P.20131013
-EN work/ula 1620402393 \
-      FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" \
+FL C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd 2021/05/07.18:15:39 P.20131013
+EN work/ula 1620422148 \
+      FL C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/ula/ula 1620402394 \
-      FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" \
-      EN work/ula 1620402393
+AR work/ula/ula 1620422149 \
+      FL C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd \
+      EN work/ula 1620422148
+FL "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.vhd" 2021/05/07.12:46:04 P.20131013

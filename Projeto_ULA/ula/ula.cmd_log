@@ -11,3 +11,4 @@ trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ula.twx ula.ncd -o ula.twr ula
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
 xst -intstyle ise -ifn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "D:/Prototipacao Digital/GA/Atividade 1/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/Projeto_ULA/ula/ula.syr" 

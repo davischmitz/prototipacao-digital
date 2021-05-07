@@ -2,12 +2,12 @@
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
 -- DESIGN NAME  : ula.vhd
 -- NAME         : 
--- PROJECT      : Unidade L�gica aritm�tica
+-- PROJECT      : Unidade Logica aritmedica
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Desenvolver uma ULA com as opera��es de Adi��o, Subtra��o em complemento de dois, Opera��o AND entre dois dados de entrada, considerando que os dado de entrada possuem 4 bits
+-- FINALITY     : Desenvolver uma ULA com as operacoes de Adicao, Subtracao em complemento de dois, Operacao AND entre dois dados de entrada, considerando que os dado de entrada possuem 4 bits
 -- DEPENDENCIES : 
 -------------------------------------------------------------------------------
---Cin para a sele��o entre as opera��es de soma e subtra��o (para 0, o circuito soma, para 1 subtrai fazendo o complemento de 2 da entrada B)
+--Cin para a selecao entre as operacoes de soma e subtracao (para 0, o circuito soma, para 1 subtrai fazendo o complemento de 2 da entrada B)
 --MUX para controlar se a sa�da ser� a do somador ou a do bloco AND
 --Multiplexador de 4 entradas, pois cada bit da sa�da poder� ser gerado a partir do m�dulo somador, subtrator ou AND
 --Seletor de 2 bits
@@ -28,7 +28,7 @@ entity ula is
 	port (
 		A           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal A
 		B           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal B
-		C_in        :	IN std_logic;	                   	   -- Entrada seletora de 1 bit para fazer a sele��o entre soma e subtra��o
+		C_in        :	IN std_logic;	                   	   -- Entrada seletora de 1 bit para fazer a selecao entre soma e subtracao
 		MuxSel      :	IN std_logic;
 		S         	:	OUT std_logic_vector(4 downto 0)	      -- Saida de 5 bits, 4 de dados + 1 bit de carry out
   );
@@ -61,6 +61,7 @@ architecture ula of ula is
 	signal s_b1: std_logic :='0';
 	signal s_b2: std_logic :='0';
 	signal s_b3: std_logic :='0';
+	
 	signal s_soma0: std_logic_vector(1 downto 0):="00"; --2 bits devido a saida + cout concatenados
 	signal s_soma1: std_logic_vector(1 downto 0):="00";
 	signal s_soma2: std_logic_vector(1 downto 0):="00";
