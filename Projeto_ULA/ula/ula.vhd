@@ -28,8 +28,8 @@ entity ula is
 	port (
 		A           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal A
 		B           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal B
-		--TODO aqui vai uma entrada de sel para habilitar AND ou Adder?
       C_in        :	IN std_logic;	                   	   -- Entrada seletora de 1 bit para fazer a seleção entre soma e subtração
+		MuxSel      :	IN std_logic;
 		S         	:	OUT std_logic_vector(4 downto 0)	      -- Saida de 5 bits, 4 de dados + 1 bit de carry out
   );
 end ula;
@@ -100,6 +100,16 @@ begin
   ---------------
 	--  Process  --
 	---------------
+	process (MuxSel,Cin)
+	begin
+		if (MuxSel = '1') then
+			S <= A&B;
+		elsif (MuxSel = '0' & Cin = '1') then
+			S <= A-B;
+		else
+			S <= A+B;
+		end if;
+	end process;
 	--up_edge
 	
 end ula;
