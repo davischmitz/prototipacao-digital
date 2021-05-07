@@ -28,7 +28,7 @@ entity ula is
 	port (
 		A           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal A
 		B           :	IN  std_logic_vector(3 downto 0);		-- Entrada 4 bits sinal B
-		--multiplexador de 4 entradas?
+		--TODO aqui vai uma entrada de sel para habilitar AND ou Adder?
       C_in        :	IN std_logic;	                   	   -- Entrada seletora de 1 bit para fazer a seleção entre soma e subtração
 		S         	:	OUT std_logic_vector(4 downto 0)	      -- Saida de 5 bits, 4 de dados + 1 bit de carry out
   );
@@ -83,7 +83,7 @@ begin
 	s_soma2 <= ("0"&A(2 downto 2)) + ("0"&s_b2) + ("0"&s_soma1(1));
 	s_soma3 <= ("0"&A(3 downto 3)) + ("0"&s_b3) + ("0"&s_soma2(1));
 	
-	--??
+	--TODO parte de AND ??
 	s_and0 <= ("0"&A(0 downto 0)) AND ("0"&s_b0) + ("0"&C_in);
 	s_and1 <= ("0"&A(1 downto 1)) AND ("0"&s_b1) + ("0"&s_and0(1));
 	s_and2 <= ("0"&A(2 downto 2)) AND ("0"&s_b2) + ("0"&s_and1(1));
@@ -94,6 +94,8 @@ begin
 	s(2) <= s_soma2(0);
 	s(3) <= s_soma3(0);
 	s(4) <= s_soma3(1) xor C_in; --C_in no bit mais significativo, com complemento de dois
+	
+	--TODO colocar um process para a alteração no C_in e seleção de adder e AND?
 	
   ---------------
 	--  Process  --
