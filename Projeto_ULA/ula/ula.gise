@@ -84,7 +84,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1620402473" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1620402473">
+    <transform xil_pn:end_ts="1620404441" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1620404441">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ula.vhd"/>
@@ -101,12 +101,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1620402478" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1620402478">
+    <transform xil_pn:end_ts="1620404447" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1620404447">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ula.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1620402485" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7728496168295598980" xil_pn:start_ts="1620402478">
+    <transform xil_pn:end_ts="1620404454" xil_pn:in_ck="155445194290" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7728496168295598980" xil_pn:start_ts="1620404447">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -116,7 +116,7 @@
       <outfile xil_pn:name="ula_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1620402485" xil_pn:in_ck="1689696835114273617" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4566880337301633551" xil_pn:start_ts="1620402485">
+    <transform xil_pn:end_ts="1620404455" xil_pn:in_ck="1689696835114273617" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4566880337301633551" xil_pn:start_ts="1620404454">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -155,7 +155,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="ula.lso"/>
@@ -180,6 +182,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>

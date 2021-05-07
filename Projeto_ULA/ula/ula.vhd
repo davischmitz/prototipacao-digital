@@ -61,7 +61,7 @@ architecture ula of ula is
 	signal s_b1: std_logic :='0';
 	signal s_b2: std_logic :='0';
 	signal s_b3: std_logic :='0';
-	signal s_soma0: std_logic_vector(1 downto 0):="00"; --2 bits devido a saï¿½da + cout concatenados
+	signal s_soma0: std_logic_vector(1 downto 0):="00"; --2 bits devido a saida + cout concatenados
 	signal s_soma1: std_logic_vector(1 downto 0):="00";
 	signal s_soma2: std_logic_vector(1 downto 0):="00";
 	signal s_soma3: std_logic_vector(1 downto 0):="00";
@@ -86,25 +86,24 @@ begin
 	s_soma2 <= ("0"&A(2 downto 2)) + ("0"&s_b2) + ("0"&s_soma1(1));
 	s_soma3 <= ("0"&A(3 downto 3)) + ("0"&s_b3) + ("0"&s_soma2(1));
 
-	
 	s_soma(0) <= s_soma0(0);
 	s_soma(1) <= s_soma1(0);
 	s_soma(2) <= s_soma2(0);
 	s_soma(3) <= s_soma3(0);
 	s_soma(4) <= s_soma3(1) xor C_in; --C_in no bit mais significativo, com complemento de dois
 	
-	s_and <= ("0"&(A and B));
+	s_and <= ("0"&(A and B)); --& concatena um bit de '0' pois o and de A e B sempre vai retornar 4bits e o contador é de 5bits
   ---------------
 	--  Process  --
 	---------------
-	process (A, B, MuxSel, s_soma, s_and)
+	process (MuxSel, s_soma, s_and)
 	begin
 		if MuxSel = '0' then
 			S <= s_soma;
 		elsif MuxSel = '1' then
 			S <= s_and;
 		else 
-			S <= "00000";
+			S <= "00000"; --no caso do mux atual que possui so um bit nao sera utilizado
 		end if;
 	end process;
 	--up_edge
