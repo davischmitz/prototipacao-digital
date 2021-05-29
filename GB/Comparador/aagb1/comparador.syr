@@ -1,0 +1,133 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: comparador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "comparador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "comparador"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : comparador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/cbits is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
+WARNING:HDLParsers:3607 - Unit work/cbits/cbits is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
+Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" in Library work.
+Entity <cbits> compiled.
+Entity <cbits> (Architecture <cbits>) compiled.
+Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" in Library work.
+Entity <comparador> compiled.
+ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 75. Undefined symbol 'x3'.
+ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 75. x3: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 76. Undefined symbol 'y3'.
+ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 76. y3: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 77. Undefined symbol 'z3'.
+ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 77. z3: Undefined symbol (last report in this block)
+ERROR:HDLParsers:850 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 78. Formal port s2 does not exist in Entity 'cbits'.
+ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 84. Undefined symbol 'w3'.
+ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 84. w3: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 86. Undefined symbol 's3'.
+ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 86. s3: Undefined symbol (last report in this block)
+ERROR:HDLParsers:850 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 83. Formal port x1 does not exist in Entity 'cbits'.
+--> 
+
+Total memory usage is 4495368 kilobytes
+
+Number of errors   :   12 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

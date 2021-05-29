@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cbits</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cbits/cbits</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">75</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">x3</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">75</arg>. <arg fmt="%s" index="3">x3</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">y3</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. <arg fmt="%s" index="3">y3</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">77</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">z3</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">77</arg>. <arg fmt="%s" index="3">z3</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">78</arg>. Formal port <arg fmt="%s" index="3">s2</arg> does not exist in <arg fmt="%s" index="4">Entity &apos;cbits&apos;</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">w3</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. <arg fmt="%s" index="3">w3</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">86</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">s3</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">86</arg>. <arg fmt="%s" index="3">s3</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot; Line <arg fmt="%d" index="2">83</arg>. Formal port <arg fmt="%s" index="3">x1</arg> does not exist in <arg fmt="%s" index="4">Entity &apos;cbits&apos;</arg>.
+</msg>
+
+</messages>
+

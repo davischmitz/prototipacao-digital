@@ -70,8 +70,7 @@ begin
 	-----------------------------
 	-- Atribuições Assíncronas --
 	-----------------------------	
-	--s_ma <= (e_ma OR (Aa > Bb)); -- e_ma + (A>B)
-	--s_me <= (e_me OR (Aa < Bb)); -- e_me + (A<B)
+
 	---------------
 	-- Processos --
 	process (Ab, Bb, e_ma, e_me)

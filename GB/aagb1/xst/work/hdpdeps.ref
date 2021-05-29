@@ -1,8 +1,0 @@
-V3 3
-FL C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd 2021/05/28.21:25:39 P.20131013
-EN work/cbits 1622247949 \
-      FL C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/cbits/cbits 1622247950 \
-      FL C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd EN work/cbits 1622247949
