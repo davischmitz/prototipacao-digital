@@ -26,7 +26,7 @@ library ieee;
 entity comparador is
 --Declaração dos generics------------------------------------------------------
   generic (
-		NUM_BITS : INTEGER := 2 --utilizado para sintetizar o projeto, precisa setar para saber quantos bits utilizar na entrada
+		NUM_BITS : INTEGER := 4 --utilizado para sintetizar o projeto, precisa setar para saber quantos bits utilizar na entrada
 	);
 	
 --Declaração das entradas e saídas---------------------------------------------
@@ -80,8 +80,8 @@ begin
 	-----------------------------
 	-- Atribuições Assíncronas --
 	-----------------------------	
-   s_ma <= s_ma_aux(NUM_BITS-1);
-	s_me<= s_me_aux(NUM_BITS-1);
+   s_ma <= s_ma_aux(0);
+	s_me <= s_me_aux(0);
 	---------------
 	-- Processos --
 	---------------

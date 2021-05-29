@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-05-29T11:51:54</DateModified>
+  <DateModified>2021-05-29T15:26:29</DateModified>
   <ModuleName>comparador</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/iseconfig/comparador.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1\</ImplementationReportsDirectory>
   <DateInitialized>2021-05-29T11:51:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

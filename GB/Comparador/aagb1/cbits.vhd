@@ -78,20 +78,19 @@ begin
 		if (Ab > Bb) then
 			s_ma <= '1';
 			s_me <= '0';
-			if(e_me = '1') then
-				s_ma <= '0';
-				s_me <= '1';
-			end if;
 		elsif (Ab < Bb) then
 			s_ma <= '0';
 			s_me <= '1';
-			if(e_ma = '1') then
-				s_ma <= '1';
-				s_me <= '0';
-			end if;
-		else
+		elsif (Ab = Bb) then
 			s_ma <= '0';
 			s_me <= '0';
+		end if;
+		if(e_ma = '1') then
+			s_ma <= '1';
+			s_me <= '0';
+		elsif(e_me = '1') then
+			s_ma <= '0';
+			s_me <= '1';
 		end if;
 	end process;
 	---------------
