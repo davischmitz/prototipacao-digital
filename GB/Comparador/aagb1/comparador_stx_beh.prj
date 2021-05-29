@@ -1,0 +1,2 @@
+vhdl isim_temp "cbits.vhd"
+vhdl isim_temp "comparador.vhd"

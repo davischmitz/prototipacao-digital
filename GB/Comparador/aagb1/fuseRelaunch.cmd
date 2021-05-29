@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/cbits_isim_beh.exe" -prj "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/cbits_beh.prj" "work.cbits" 
+-intstyle "ise" -incremental -o "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador_isim_beh.exe" -prj "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador_beh.prj" "work.comparador" 

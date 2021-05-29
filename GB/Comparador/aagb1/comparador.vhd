@@ -59,35 +59,29 @@ architecture comparador of comparador is
 	-----------------------------------
 	-- Declarações de sinais
 	-----------------------------------
-	signal auxiliar_tl: std_logic :='0';
+	signal s_ma_aux: std_logic_vector(NUM_BITS downto 0) := (others => '0');
+	signal s_me_aux: std_logic_vector(NUM_BITS downto 0) := (others => '0');
 	
 begin
 	------------------
 	-- Port Mapping --
 	------------------
-
-
-
-	
-	
-	instancia1 : entity work.cbits
-				port map (
-					x2	=> x3,
-					y2 => y3,
-					z2 => z3,
-					s2	=> auxiliar_tl
-				);
-	
-	instancia2 : entity work.cbits
-				port map (
-					x1	=> auxiliar_tl,
-					y1 	=> w3,
-					s1	=> s3
-				);
+	comparador : for i in 0 to NUM_BITS - 1 generate 
+	instancia: entity work.cbits
+			port map (
+				Ab	=> A(i),
+				Bb => B(i),
+				e_ma => s_ma_aux(i+1),
+				e_me => s_me_aux(i+1),
+				s_ma => s_ma_aux(i),
+				s_me => s_me_aux(i)
+			);
+	end generate;
 	-----------------------------
 	-- Atribuições Assíncronas --
 	-----------------------------	
---	s3 <= auxiliar_tl xor w3;
+   s_ma <= s_ma_aux(NUM_BITS-1);
+	s_me<= s_me_aux(NUM_BITS-1);
 	---------------
 	-- Processos --
 	---------------

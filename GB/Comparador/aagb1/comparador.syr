@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: comparador.prj
 
@@ -104,30 +104,198 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/cbits is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
-WARNING:HDLParsers:3607 - Unit work/cbits/cbits is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
 Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" in Library work.
-Entity <cbits> compiled.
-Entity <cbits> (Architecture <cbits>) compiled.
+Architecture cbits of Entity cbits is up to date.
 Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" in Library work.
 Entity <comparador> compiled.
-ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 75. Undefined symbol 'x3'.
-ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 75. x3: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 76. Undefined symbol 'y3'.
-ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 76. y3: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 77. Undefined symbol 'z3'.
-ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 77. z3: Undefined symbol (last report in this block)
-ERROR:HDLParsers:850 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 78. Formal port s2 does not exist in Entity 'cbits'.
-ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 84. Undefined symbol 'w3'.
-ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 84. w3: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 86. Undefined symbol 's3'.
-ERROR:HDLParsers:1209 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 86. s3: Undefined symbol (last report in this block)
-ERROR:HDLParsers:850 - "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" Line 83. Formal port x1 does not exist in Entity 'cbits'.
+Entity <comparador> (Architecture <comparador>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <comparador> in library <work> (architecture <comparador>) with generics.
+	NUM_BITS = 2
+
+Analyzing hierarchy for entity <cbits> in library <work> (architecture <cbits>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <comparador> in library <work> (Architecture <comparador>).
+	NUM_BITS = 2
+Entity <comparador> analyzed. Unit <comparador> generated.
+
+Analyzing Entity <cbits> in library <work> (Architecture <cbits>).
+Entity <cbits> analyzed. Unit <cbits> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <cbits>.
+    Related source file is "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
+Unit <cbits> synthesized.
+
+
+Synthesizing Unit <comparador>.
+    Related source file is "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd".
+WARNING:Xst:653 - Signal <s_me_aux<2>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <s_me_aux<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <s_ma_aux<2>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <s_ma_aux<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <comparador> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:524 - All outputs of the instance <comparador[0].instancia> of the block <cbits> are unconnected in block <comparador>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <comparador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block comparador, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : comparador.ngr
+Top Level Output File Name         : comparador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 2
+#      LUT2                        : 2
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        1  out of   4656     0%  
+ Number of 4 input LUTs:                  2  out of   9312     0%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   4  out of    232     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 6.236ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Delay:               6.236ns (Levels of Logic = 3)
+  Source:            B<1> (PAD)
+  Destination:       s_ma (PAD)
+
+  Data Path: B<1> to s_ma
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  B_1_IBUF (B_1_IBUF)
+     LUT2:I0->O            1   0.704   0.420  comparador[1].instancia/s_ma_and00001 (s_ma_OBUF)
+     OBUF:I->O                 3.272          s_ma_OBUF (s_ma)
+    ----------------------------------------
+    Total                      6.236ns (5.194ns logic, 1.042ns route)
+                                       (83.3% logic, 16.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.24 secs
+ 
 --> 
 
-Total memory usage is 4495368 kilobytes
+Total memory usage is 4497672 kilobytes
 
-Number of errors   :   12 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
