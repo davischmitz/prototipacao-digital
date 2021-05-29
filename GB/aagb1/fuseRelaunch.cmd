@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/cbits_isim_beh.exe" -prj "C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/cbits_beh.prj" "work.cbits" 

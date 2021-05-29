@@ -1,0 +1,32 @@
+Command line:
+   cbits_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54187
+
+Fri May 28 21:26:19 2021
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5149.8 Meg
+
+ Total Signals          : 6
+ Total Nets             : 6
+ Total Signal Drivers   : 2
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 1
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 384
+Total Line Count : 13
+Total Line Count : 13
+Total Line Count : 13
+Total Line Count : 13
+
+ Total Simulation Time: 0.21875 sec
+
+ Current Memory Usage: 4677.94 Meg
+
+Fri May 28 21:29:42 2021
+
