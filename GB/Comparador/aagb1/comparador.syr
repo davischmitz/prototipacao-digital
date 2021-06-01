@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.30 secs
  
 --> Reading design: comparador.prj
 
@@ -104,9 +104,14 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" in Library work.
-Architecture cbits of Entity cbits is up to date.
-Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/comparador is now defined in a different file.  It was defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd", and is now defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd".
+WARNING:HDLParsers:3607 - Unit work/comparador/comparador is now defined in a different file.  It was defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd", and is now defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd".
+WARNING:HDLParsers:3607 - Unit work/cbits is now defined in a different file.  It was defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd", and is now defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd".
+WARNING:HDLParsers:3607 - Unit work/cbits/cbits is now defined in a different file.  It was defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd", and is now defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd".
+Compiling vhdl file "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd" in Library work.
+Entity <cbits> compiled.
+Entity <cbits> (Architecture <cbits>) compiled.
+Compiling vhdl file "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd" in Library work.
 Entity <comparador> compiled.
 Entity <comparador> (Architecture <comparador>) compiled.
 
@@ -137,40 +142,47 @@ Entity <cbits> analyzed. Unit <cbits> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <cbits>.
-    Related source file is "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd".
+    Related source file is "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd".
+INFO:Xst:1608 - Relative priorities of control signals on register <s_ma> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+INFO:Xst:1608 - Relative priorities of control signals on register <s_me> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_ma>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <s_me>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit xor2 for signal <s_ma$xor0000> created at line 77.
 Unit <cbits> synthesized.
 
 
 Synthesizing Unit <comparador>.
-    Related source file is "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd".
+    Related source file is "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd".
 WARNING:Xst:653 - Signal <s_me_aux<4>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:646 - Signal <s_me_aux<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <s_ma_aux<4>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:646 - Signal <s_ma_aux<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <comparador> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
 =========================================================================
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:524 - All outputs of the instance <comparador[0].instancia> of the block <cbits> are unconnected in block <comparador>.
-   This instance will be removed from the design along with all underlying logic
-WARNING:Xst:524 - All outputs of the instance <comparador[1].instancia> of the block <cbits> are unconnected in block <comparador>.
-   This instance will be removed from the design along with all underlying logic
-WARNING:Xst:524 - All outputs of the instance <comparador[2].instancia> of the block <cbits> are unconnected in block <comparador>.
-   This instance will be removed from the design along with all underlying logic
 
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
 =========================================================================
 
 =========================================================================
@@ -178,6 +190,8 @@ Found no macro
 =========================================================================
 
 Optimizing unit <comparador> ...
+
+Optimizing unit <cbits> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -216,10 +230,15 @@ Design Statistics
 # IOs                              : 10
 
 Cell Usage :
-# BELS                             : 2
-#      LUT2                        : 2
-# IO Buffers                       : 4
-#      IBUF                        : 2
+# BELS                             : 19
+#      GND                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 6
+#      LUT4                        : 6
+# FlipFlops/Latches                : 8
+#      LDCP                        : 8
+# IO Buffers                       : 10
+#      IBUF                        : 8
 #      OBUF                        : 2
 =========================================================================
 
@@ -228,10 +247,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                        1  out of   4656     0%  
- Number of 4 input LUTs:                  2  out of   9312     0%  
+ Number of Slices:                       16  out of   4656     0%  
+ Number of Slice Flip Flops:              6  out of   9312     0%  
+ Number of 4 input LUTs:                 18  out of   9312     0%  
  Number of IOs:                          10
- Number of bonded IOBs:                   4  out of    232     1%  
+ Number of bonded IOBs:                  10  out of    232     4%  
+    IOB Flip Flops:                       2
 
 ---------------------------
 Partition Resource Summary:
@@ -251,11 +272,39 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------------------------------------------------+--------------------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)                | Load  |
+-----------------------------------------------------------------------------+--------------------------------------+-------+
+comparador[3].instancia/s_ma_not0000(comparador[3].instancia/s_ma_not00001:O)| NONE(*)(comparador[3].instancia/s_ma)| 2     |
+comparador[2].instancia/s_ma_not0000(comparador[2].instancia/s_ma_not00001:O)| NONE(*)(comparador[2].instancia/s_ma)| 2     |
+comparador[1].instancia/s_ma_not0000(comparador[1].instancia/s_ma_not00001:O)| NONE(*)(comparador[1].instancia/s_ma)| 2     |
+comparador[0].instancia/s_ma_not0000(comparador[0].instancia/s_ma_not00001:O)| NONE(*)(comparador[0].instancia/s_ma)| 2     |
+-----------------------------------------------------------------------------+--------------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+---------------------------------------------------------------------------+-----------------------------------+-------+
+Control Signal                                                             | Buffer(FF name)                   | Load  |
+---------------------------------------------------------------------------+-----------------------------------+-------+
+comparador[3].instancia/s_ma_or0000(comparador[3].instancia/s_me_or00011:O)| NONE(comparador[3].instancia/s_ma)| 2     |
+comparador[3].instancia/s_ma_or0001(comparador[3].instancia/s_me_or00001:O)| NONE(comparador[3].instancia/s_ma)| 2     |
+comparador[0].instancia/s_ma_or0000(comparador[0].instancia/s_ma_or00001:O)| NONE(comparador[0].instancia/s_ma)| 1     |
+comparador[0].instancia/s_ma_or0001(comparador[0].instancia/s_ma_or00011:O)| NONE(comparador[0].instancia/s_ma)| 1     |
+comparador[0].instancia/s_me_or0000(comparador[0].instancia/s_me_or00001:O)| NONE(comparador[0].instancia/s_me)| 1     |
+comparador[0].instancia/s_me_or0001(comparador[0].instancia/s_me_or00011:O)| NONE(comparador[0].instancia/s_me)| 1     |
+comparador[1].instancia/s_ma_or0000(comparador[1].instancia/s_ma_or00001:O)| NONE(comparador[1].instancia/s_ma)| 1     |
+comparador[1].instancia/s_ma_or0001(comparador[1].instancia/s_ma_or00011:O)| NONE(comparador[1].instancia/s_ma)| 1     |
+comparador[1].instancia/s_me_or0000(comparador[1].instancia/s_me_or00001:O)| NONE(comparador[1].instancia/s_me)| 1     |
+comparador[1].instancia/s_me_or0001(comparador[1].instancia/s_me_or00011:O)| NONE(comparador[1].instancia/s_me)| 1     |
+comparador[2].instancia/s_ma_or0000(comparador[2].instancia/s_ma_or00001:O)| NONE(comparador[2].instancia/s_ma)| 1     |
+comparador[2].instancia/s_ma_or0001(comparador[2].instancia/s_ma_or00011:O)| NONE(comparador[2].instancia/s_ma)| 1     |
+comparador[2].instancia/s_me_or0000(comparador[2].instancia/s_me_or00001:O)| NONE(comparador[2].instancia/s_me)| 1     |
+comparador[2].instancia/s_me_or0001(comparador[2].instancia/s_me_or00011:O)| NONE(comparador[2].instancia/s_me)| 1     |
+---------------------------------------------------------------------------+-----------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -263,43 +312,43 @@ Speed Grade: -4
 
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.236ns
+   Maximum output required time after clock: 4.368ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4 / 2
+Timing constraint: Default OFFSET OUT AFTER for Clock 'comparador[0].instancia/s_ma_not0000'
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               6.236ns (Levels of Logic = 3)
-  Source:            B<3> (PAD)
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            comparador[0].instancia/s_ma (LATCH)
   Destination:       s_ma (PAD)
+  Source Clock:      comparador[0].instancia/s_ma_not0000 falling
 
-  Data Path: B<3> to s_ma
+  Data Path: comparador[0].instancia/s_ma to s_ma
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.218   0.622  B_3_IBUF (B_3_IBUF)
-     LUT2:I0->O            1   0.704   0.420  comparador[3].instancia/s_ma_and00001 (s_ma_OBUF)
+     LDCP:G->Q             1   0.676   0.420  comparador[0].instancia/s_ma (comparador[0].instancia/s_ma)
      OBUF:I->O                 3.272          s_ma_OBUF (s_ma)
     ----------------------------------------
-    Total                      6.236ns (5.194ns logic, 1.042ns route)
-                                       (83.3% logic, 16.7% route)
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.04 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.71 secs
  
 --> 
 
-Total memory usage is 4497688 kilobytes
+Total memory usage is 4513836 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

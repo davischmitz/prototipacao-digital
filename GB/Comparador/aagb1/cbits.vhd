@@ -1,34 +1,27 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
--- Engineer: 
--- Create Date: 
--- Design Name: 
--- Component Name: 
--- Target Device: 
--- Tool versions: 
--- Description: 
---    
--- Dependencies:
---    
--- Revision:
---    
--- Additional Comments: 
-
+-- UNISINOS - Universidade do Vale do Rio dos Sinos 
+-- DESIGN NAME  : cbits.vhd
+-- NAME         : 
+-- PROJECT      : 
+-- AUTHOR       : Aline Nunes e Davi Schmitz
+-- FINALITY     : 
+-- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------
 --Bibliotecas
 --------------------------------------------------------------------------------
 library ieee;
-use ieee.std_logic_1164.all;
-use IEEE.STD_LOGIC_ARITH.ALL;    --operacoes aritmeticas
-use IEEE.STD_LOGIC_UNSIGNED.ALL; --para trabalhar com numeros sem sinal 
+	use ieee.std_logic_1164.all;
+	use IEEE.STD_LOGIC_ARITH.ALL;    --operacoes aritmeticas
+	use IEEE.STD_LOGIC_UNSIGNED.ALL; --para trabalhar com numeros sem sinal 
 
 -------------------------------------------------------------------------------
 -- Entidade
 -------------------------------------------------------------------------------
 entity cbits is
---Declaração dos generics------------------------------------------------------
+--Declaracao dos generics------------------------------------------------------
   
---Declaração das entradas e saídas---------------------------------------------
+--Declaracao das entradas e saidas---------------------------------------------
   port (
 	Ab	: in   STD_LOGIC;
 	Bb 	: in   STD_LOGIC;
@@ -40,7 +33,7 @@ entity cbits is
 end cbits;
 
 --------------------------------------------------------------------------------
---Descrição da lógica
+--Declaracao da logica
 --------------------------------------------------------------------------------
 architecture cbits of cbits is
 	-----------------------------------
@@ -54,11 +47,11 @@ architecture cbits of cbits is
 	
 	
 	-----------------------------------
-	-- Declarações de componentes
+	-- Declaracoes de componentes
 	-----------------------------------
 	
 	-----------------------------------
-	-- Declarações de sinais
+	-- Declaracoes de sinais
 	-----------------------------------
 	
 	
@@ -68,13 +61,14 @@ begin
 	------------------
 	
 	-----------------------------
-	-- Atribuições Assíncronas --
+	-- Atribuicoes Assincronas --
 	-----------------------------	
 
 	---------------
 	-- Processos --
 	process (Ab, Bb, e_ma, e_me)
 	begin
+		--primeira verifica��o
 		if (Ab > Bb) then
 			s_ma <= '1';
 			s_me <= '0';
@@ -85,6 +79,7 @@ begin
 			s_ma <= '0';
 			s_me <= '0';
 		end if;
+		--segunda verifica��o para prioridade do bit mais significativo
 		if(e_ma = '1') then
 			s_ma <= '1';
 			s_me <= '0';

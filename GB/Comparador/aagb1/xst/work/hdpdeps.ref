@@ -1,17 +1,19 @@
-V3 8
+V3 10
 FL C:/unisinos/prototipacao-digital-ga-1/GB/aagb1/aagb1.vhd 2021/05/28.21:25:39 P.20131013
-FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" 2021/05/29.11:45:28 P.20131013
-EN work/cbits 1622312739 \
-      FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" \
+FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd 2021/05/31.22:53:44 P.20131013
+EN work/cbits 1622512467 \
+      FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/cbits/cbits 1622312740 \
-      FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" \
-      EN work/cbits 1622312739
-FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" 2021/05/29.15:22:02 P.20131013
-EN work/comparador 1622312741 \
-      FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" \
+AR work/cbits/cbits 1622512468 \
+      FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd \
+      EN work/cbits 1622512467
+FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd 2021/05/31.22:53:33 P.20131013
+EN work/comparador 1622512435 \
+      FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/comparador/comparador 1622312742 \
-      FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" \
-      EN work/comparador 1622312741 CP work/cbits
+AR work/comparador/comparador 1622512436 \
+      FL C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd \
+      EN work/comparador 1622512435 CP work/cbits
+FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd" 2021/05/29.11:45:28 P.20131013
+FL "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd" 2021/05/29.15:22:02 P.20131013

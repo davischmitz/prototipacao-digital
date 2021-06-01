@@ -10,3 +10,4 @@ xst -intstyle ise -ifn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparad
 xst -intstyle ise -ifn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.xst" -ofn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.syr" 
 xst -intstyle ise -ifn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.xst" -ofn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.syr" 
 xst -intstyle ise -ifn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.xst" -ofn "D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.syr" 
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.syr" 

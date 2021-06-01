@@ -5,28 +5,37 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s_me_aux&lt;4&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/comparador</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">s_me_aux&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/comparador/comparador</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/comparador.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s_ma_aux&lt;4&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cbits</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">s_ma_aux&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cbits/cbits</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/Prototipacao Digital/prototipacao-digital/GB/Comparador/aagb1/cbits.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/cbits.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="524" delta="old" >All outputs of the instance &lt;<arg fmt="%s" index="1">comparador[0].instancia</arg>&gt; of the block &lt;<arg fmt="%s" index="2">cbits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">comparador</arg>&gt;.
-This instance will be removed from the design along with all underlying logic
+<msg type="info" file="Xst" num="1608" delta="new" >Relative priorities of control signals on register &lt;<arg fmt="%s" index="1">s_ma</arg>&gt; differ from those commonly found in the selected device family. This will result in additional logic around the register.
 </msg>
 
-<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">comparador[1].instancia</arg>&gt; of the block &lt;<arg fmt="%s" index="2">cbits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">comparador</arg>&gt;.
-This instance will be removed from the design along with all underlying logic
+<msg type="info" file="Xst" num="1608" delta="new" >Relative priorities of control signals on register &lt;<arg fmt="%s" index="1">s_me</arg>&gt; differ from those commonly found in the selected device family. This will result in additional logic around the register.
 </msg>
 
-<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">comparador[2].instancia</arg>&gt; of the block &lt;<arg fmt="%s" index="2">cbits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">comparador</arg>&gt;.
-This instance will be removed from the design along with all underlying logic
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">s_ma</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">s_me</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">s_me_aux&lt;4&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">s_ma_aux&lt;4&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

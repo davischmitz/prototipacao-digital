@@ -1,16 +1,11 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
--- Engineer: 
--- Create Date: 
--- Design Name: 
--- Component Name: 
--- Target Device: 
--- Tool versions: 
--- Description: 
---    
--- Dependencies:
---    
--- Revision:
---    
+-- UNISINOS - Universidade do Vale do Rio dos Sinos 
+-- DESIGN NAME  : comparador.vhd
+-- NAME         : 
+-- PROJECT      : AA01GB
+-- AUTHOR       : Aline Nunes e Davi Schmitz
+-- FINALITY     : Desenvolver em VHDL a descri��o de HW de um circuito comparador de dois n�meros 'A' e 'B'. O circuito deve detectar se 'A' e maior, menor ou igual ao valor de 'B'
+-- DEPENDENCIES : 
 -- Additional Comments: 
 
 --O n�mero de bits das entradas Ab e Bb � definido pelo GENERIC NUM_BITS do tipo inteiro
@@ -24,12 +19,12 @@ library ieee;
 -- Entidade
 -------------------------------------------------------------------------------
 entity comparador is
---Declaração dos generics------------------------------------------------------
+--Declaracao dos generics------------------------------------------------------
   generic (
 		NUM_BITS : INTEGER := 4 --utilizado para sintetizar o projeto, precisa setar para saber quantos bits utilizar na entrada
 	);
 	
---Declaração das entradas e saídas---------------------------------------------
+--Declaracao das entradas e saidas---------------------------------------------
   port (
 		A  	: in   STD_LOGIC_VECTOR(NUM_BITS-1 downto 0); --para dimensionar A de acordo com NUM_BITS
 		B    	: in   STD_LOGIC_VECTOR(NUM_BITS-1 downto 0);
@@ -39,7 +34,7 @@ entity comparador is
 end comparador;
 
 --------------------------------------------------------------------------------
---Descrição da lógica
+--Declaracao da logica
 --------------------------------------------------------------------------------
 architecture comparador of comparador is
 	-----------------------------------
@@ -53,11 +48,11 @@ architecture comparador of comparador is
 	
 	
 	-----------------------------------
-	-- Declarações de componentes
+	-- Declaracoes de componentes
 	-----------------------------------
 	
 	-----------------------------------
-	-- Declarações de sinais
+	-- Declaracoes de sinais
 	-----------------------------------
 	signal s_ma_aux: std_logic_vector(NUM_BITS downto 0) := (others => '0');
 	signal s_me_aux: std_logic_vector(NUM_BITS downto 0) := (others => '0');
@@ -78,7 +73,7 @@ begin
 			);
 	end generate;
 	-----------------------------
-	-- Atribuições Assíncronas --
+	-- Atribuicoes Assincronas --
 	-----------------------------	
    s_ma <= s_ma_aux(0);
 	s_me <= s_me_aux(0);

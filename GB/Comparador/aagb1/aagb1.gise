@@ -46,12 +46,13 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="comparador.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="comparador.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="comparador.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparador_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparador_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="comparador_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="comparador_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="comparador_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparador_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="comparador_summary.html"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparador_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="comparador_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="comparador_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
@@ -71,19 +72,22 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1622315581" xil_pn:in_ck="-8813223601135933059" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622315581">
+    <transform xil_pn:end_ts="1622512946" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622512946">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbits.vhd"/>
       <outfile xil_pn:name="comparador.vhd"/>
+      <outfile xil_pn:name="comparador_tb.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1622314673" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6765674759960422774" xil_pn:start_ts="1622314673">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1622314673" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6385336647410186488" xil_pn:start_ts="1622314673">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1622312815" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2463159504477548610" xil_pn:start_ts="1622312815">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -93,7 +97,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="cbits.vhd"/>
@@ -103,6 +109,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
@@ -117,6 +124,7 @@
     <transform xil_pn:end_ts="1622315369" xil_pn:in_ck="-6710786816467462501" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-233198238763685565" xil_pn:start_ts="1622315368">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -152,7 +160,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1622312743" xil_pn:in_ck="-8813223601135933059" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7830773685538210779" xil_pn:start_ts="1622312737">
+    <transform xil_pn:end_ts="1622512440" xil_pn:in_ck="-8813223601135933059" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7830773685538210779" xil_pn:start_ts="1622512425">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -170,6 +178,7 @@
       <outfile xil_pn:name="comparador.stx"/>
       <outfile xil_pn:name="comparador.syr"/>
       <outfile xil_pn:name="comparador.xst"/>
+      <outfile xil_pn:name="comparador_beh.prj"/>
       <outfile xil_pn:name="comparador_stx_beh.prj"/>
       <outfile xil_pn:name="comparador_vhdl.prj"/>
       <outfile xil_pn:name="comparador_xst.xrpt"/>
