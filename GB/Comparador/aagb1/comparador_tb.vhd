@@ -44,13 +44,16 @@ ARCHITECTURE behavior OF comparador_tb IS
 	
 	-----------------------------------
 	-- Declaration of components
+	-- Component Declaration for the Unit Under Test (UUT)
 	-----------------------------------
 	COMPONENT comparador
 		PORT(
 			clock			: in std_logic;									
 			reset			: in std_logic;		
-			w				: in std_logic;				
-			z				: out std_logic
+			A           : IN  std_logic_vector(3 downto 0);
+         B           : IN  std_logic_vector(3 downto 0);
+         s_ma        : OUT  std_logic;
+         s_me        : OUT  std_logic
 		);
 	END COMPONENT;
 
@@ -58,16 +61,18 @@ ARCHITECTURE behavior OF comparador_tb IS
 	-- Declaration of Signals
 	-----------------------------------
 	--Inputs
-	signal clock : std_logic := '0';
-	signal reset : std_logic := '0';
-	signal w 	 : std_logic := '0';
+	signal A : std_logic_vector(3 downto 0) := (others => '0');
+   signal B : std_logic_vector(3 downto 0) := (others => '0');
+	
+	--signal clock : std_logic := '0';
+	--signal reset : std_logic := '0';
 
 	--Outputs
-	signal z 	 : std_logic := '0';
-
+	signal s_ma : std_logic;
+   signal s_me : std_logic;
 	
 	-- Clock
-	constant C_period : time := 13 ns; 
+	--constant C_period : time := 13 ns; 
 	constant tempo_processo : time := 14 ns;
 	
 	BEGIN
@@ -76,14 +81,18 @@ ARCHITECTURE behavior OF comparador_tb IS
 	------------------
 	-- Port Mapping --
 	------------------
- 	
+ 	-- Instantiate the Unit Under Test (UUT)
 	uut: comparador
 		
 		PORT MAP (
-			clock => clock,
-			reset => reset,
-			w 		=> w,
-			z		=> z
+			--clock => clock,
+			--reset => reset,
+			A => A,
+         B => B,
+			--e_ma => e_ma,
+			--e_me => e_me,
+         s_ma => s_ma,
+         s_me => s_me
 		);
 	
 	-----------------------------
@@ -95,29 +104,50 @@ ARCHITECTURE behavior OF comparador_tb IS
 	-- Processes --
 	---------------
 	-- Clock process definitions
-	C_process :process
-		begin
-			clock <= '0';
-			wait for C_period/2;
-			clock <= '1';
-			wait for C_period/2;
-	end process;
+	--C_process :process
+	--	begin
+	--		clock <= '0';
+	--		wait for C_period/2;
+	--		clock <= '1';
+	--		wait for C_period/2;
+	--end process;
 
 	-- Stimulus process
 	stim_proc: process
 	begin
-		reset <= '0';
+		A <= "001";
+		B <= "001";
+		e_ma <= '0';
+		e_me <= '0';
 		wait for tempo_processo;
-		reset <= '1';
-		w		<= '1';
+		
+		A <= "001";
+		B <= "010";
 		wait for tempo_processo;
-		w		<= '0';
+		
+		A <= "111";
+		B <= "010";
 		wait for tempo_processo;
-		w		<= '0';
+		
+		A <= "100";
+		B <= "001";
 		wait for tempo_processo;
-		w		<= '1';
-		wait for tempo_processo;		
-		wait;
+
+		A <= "101";
+		B <= "010";
+		wait for tempo_processo;
+		--reset <= '0';
+		--wait for tempo_processo;
+		--reset <= '1';
+		--w		<= '1';
+		--wait for tempo_processo;
+		--w		<= '0';
+		--wait for tempo_processo;
+		--w		<= '0';
+		--wait for tempo_processo;
+		--w		<= '1';
+		--wait for tempo_processo;		
+		--wait;
 	end process;
 END;
 -----------------------------------------------------------------------------------------------------------------------------------------

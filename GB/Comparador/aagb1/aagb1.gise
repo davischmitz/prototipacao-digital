@@ -72,22 +72,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1622512946" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622512946">
+    <transform xil_pn:end_ts="1622747455" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622747455">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbits.vhd"/>
       <outfile xil_pn:name="comparador.vhd"/>
       <outfile xil_pn:name="comparador_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1622314673" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6765674759960422774" xil_pn:start_ts="1622314673">
+    <transform xil_pn:end_ts="1622739048" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6618911817852280051" xil_pn:start_ts="1622739048">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1622314673" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6385336647410186488" xil_pn:start_ts="1622314673">
+    <transform xil_pn:end_ts="1622739048" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2124538467549341259" xil_pn:start_ts="1622739048">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1622312815" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2463159504477548610" xil_pn:start_ts="1622312815">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -97,13 +95,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="cbits.vhd"/>
-      <outfile xil_pn:name="comparador.vhd"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1622315368" xil_pn:in_ck="-8813223601135933059" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3566781219467130058" xil_pn:start_ts="1622315365">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -113,24 +110,20 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="comparador_beh.prj"/>
-      <outfile xil_pn:name="comparador_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1622315369" xil_pn:in_ck="-6710786816467462501" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-233198238763685565" xil_pn:start_ts="1622315368">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="comparador_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1622245115" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1622245115">
       <status xil_pn:value="SuccessfullyRun"/>
