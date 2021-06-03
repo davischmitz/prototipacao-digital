@@ -2,4 +2,9 @@ Command line:
    comparador_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  65280
+     -socket  50796
+
+Thu Jun 03 18:50:48 2021
+
+
+ Elaboration Time: 0.046875 sec

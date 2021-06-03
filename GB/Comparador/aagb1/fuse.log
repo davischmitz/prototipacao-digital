@@ -20,5 +20,5 @@ Waiting for 1 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\comparador_tb_isim_beh.exe.sim\libPortability.dll".
 Compiled 9 VHDL Units
 Built simulation executable C:/unisinos/prototipacao-digital-ga-1/GB/Comparador/aagb1/comparador_tb_isim_beh.exe
-Fuse Memory Usage: 34368 KB
-Fuse CPU Usage: 889 ms
+Fuse Memory Usage: 33756 KB
+Fuse CPU Usage: 734 ms

@@ -66,7 +66,7 @@ ARCHITECTURE behavior OF comparador_tb IS
    signal s_me : std_logic;
 	
 	-- Clock
-	constant tempo_processo : time := 14 ns;
+	constant tempo_processo : time := 14 ns; --usada para gerar estimulos para as entradas
 	
 	BEGIN
 	
@@ -91,10 +91,10 @@ ARCHITECTURE behavior OF comparador_tb IS
 	---------------
 	-- Processes --
 	---------------
-
 	-- Stimulus process
 	stim_proc: process
 	begin
+		wait for 100 ns;	
 		--A e B iguais
 		A <= "0001"; --1
 		B <= "0001";
@@ -105,7 +105,7 @@ ARCHITECTURE behavior OF comparador_tb IS
 		B <= "0010"; --2
 		wait for tempo_processo;
 		
-		--A maior que B
+		--A maior que B 
 		A <= "0100"; --4
 		B <= "0010"; --2
 		wait for tempo_processo;
@@ -119,6 +119,8 @@ ARCHITECTURE behavior OF comparador_tb IS
 		A <= "0101"; --5
 		B <= "0010"; --2
 		wait for tempo_processo;
+		
+		wait;
 		
 	end process;
 END;
