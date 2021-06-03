@@ -1,0 +1,5 @@
+Command line:
+   comparador_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65280

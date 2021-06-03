@@ -1,0 +1,3 @@
+vhdl work "cbits.vhd"
+vhdl work "comparador.vhd"
+vhdl work "comparador_tb.vhd"
