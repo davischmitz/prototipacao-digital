@@ -76,7 +76,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1622757041" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622757041">
+    <transform xil_pn:end_ts="1622759539" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1622759539">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbits.vhd"/>
@@ -98,6 +98,10 @@
     <transform xil_pn:end_ts="1622757041" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1622757041">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="cbits.vhd"/>
       <outfile xil_pn:name="comparador.vhd"/>
       <outfile xil_pn:name="comparador_tb.vhd"/>
@@ -105,6 +109,11 @@
     <transform xil_pn:end_ts="1622757046" xil_pn:in_ck="-4841890210072517622" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4027000242383780616" xil_pn:start_ts="1622757041">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="comparador_tb_beh.prj"/>
       <outfile xil_pn:name="comparador_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -115,6 +124,9 @@
     <transform xil_pn:end_ts="1622757046" xil_pn:in_ck="-2741302228247251792" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7757862589550461589" xil_pn:start_ts="1622757046">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="comparador_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>

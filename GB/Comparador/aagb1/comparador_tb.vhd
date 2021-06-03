@@ -94,7 +94,6 @@ ARCHITECTURE behavior OF comparador_tb IS
 	-- Stimulus process
 	stim_proc: process
 	begin
-		wait for 100 ns;	
 		--A e B iguais
 		A <= "0001"; --1
 		B <= "0001";
