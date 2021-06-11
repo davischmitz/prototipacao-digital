@@ -1,10 +1,10 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
--- DESIGN NAME  : top_level.vhd
--- NAME         : TOP LEVEL
+-- DESIGN NAME  : fsm.vhd
+-- NAME         : FSM
 -- PROJECT      : Elevador de três pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Implementação através do uso de máquina de estado de Moore e com uso de descrição de HW estrutural, o projeto de controle de um top_level de três andares
+-- FINALITY     : Implementação através do uso de máquina de estado de Moore e com uso de descrição de HW estrutural, o projeto de controle de um fsm de três andares
 -- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ library ieee;
 -------------------------------------------------------------------------------
 -- Entidade
 -------------------------------------------------------------------------------
-entity top_level is
+entity fsm is
 --Declaracao dos generics------------------------------------------------------
   
 --Declaracao das entradas e saidas---------------------------------------------
@@ -34,12 +34,12 @@ entity top_level is
 		LED                 : OUT std_logic_vector(2 downto 0);
 		Alarme              : OUT std_logic_vector(3 downto 0)
   );
-end top_level;
+end fsm;
 
 --------------------------------------------------------------------------------
 --Declaracao da logica
 --------------------------------------------------------------------------------
-architecture top_level of top_level is
+architecture fsm of fsm is
 	-----------------------------------
 	-- Tipos 
 	-----------------------------------
@@ -67,12 +67,11 @@ begin
 	-----------------------------
 	-- Atribuicoes Assincronas --
 	-----------------------------	
-	--aqui vai uma lógica básica, das portas e tal 
-	--no arquivo da FSM vai a lógica mais 'pesada'
+
 	---------------
 	-- Processos --
-	--arquivo TOP LEVEL não deve ter processo
+	--pode ter processos
 	---------------
 
 	
-end top_level;
+end fsm;
