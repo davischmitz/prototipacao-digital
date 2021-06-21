@@ -1,0 +1,35 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" in Library work.
+ERROR:HDLParsers:164 - "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" Line 178. parse error, unexpected IDENTIFIER, expecting THEN
+ERROR:HDLParsers:802 - "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" Line 173. btn_andar_2 is not a boolean expression.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total memory usage is 4468332 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -104,9 +104,10 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd" in Library work.
-Entity <top_level> compiled.
-Entity <top_level> (Architecture <top_level>) compiled.
+WARNING:HDLParsers:3607 - Unit work/top_level is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd".
+WARNING:HDLParsers:3607 - Unit work/top_level/top_level is now defined in a different file.  It was defined in "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd", and is now defined in "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd".
+Compiling vhdl file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd" in Library work.
+Architecture top_level of Entity top_level is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -126,7 +127,7 @@ Entity <top_level> analyzed. Unit <top_level> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <top_level>.
-    Related source file is "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd".
+    Related source file is "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd".
 WARNING:Xst:647 - Input <Porta> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Emergencia> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1306 - Output <Motor_Subindo> is never assigned.
@@ -251,14 +252,14 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.72 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.22 secs
  
 --> 
 
-Total memory usage is 4497132 kilobytes
+Total memory usage is 4498300 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

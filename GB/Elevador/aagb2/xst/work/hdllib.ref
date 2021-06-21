@@ -1,2 +1,4 @@
-AR top_level top_level C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd sub00/vhpl01 1623451363
-EN top_level NULL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd sub00/vhpl00 1623451362
+EN controle_estados NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl02 1624236707
+AR top_level top_level "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd" sub00/vhpl01 1624060048
+AR controle_estados controle_estados "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl03 1624224817
+EN top_level NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd" sub00/vhpl00 1624060047

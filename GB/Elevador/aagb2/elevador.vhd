@@ -1,10 +1,10 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
--- DESIGN NAME  : top_level.vhd
--- NAME         : TOP LEVEL
--- PROJECT      : Elevador de três pavimentos
+-- DESIGN NAME  : elevador.vhd
+-- NAME         : 
+-- PROJECT      : Elevador de trï¿½s pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Implementação através do uso de máquina de estado de Moore e com uso de descrição de HW estrutural, o projeto de controle de um top_level de três andares
+-- FINALITY     : Implementaï¿½ï¿½o atravï¿½s do uso de mï¿½quina de estado de Moore e com uso de descriï¿½ï¿½o de HW estrutural, o projeto de controle de um elevador de trï¿½s andares
 -- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ library ieee;
 -------------------------------------------------------------------------------
 -- Entidade
 -------------------------------------------------------------------------------
-entity top_level is
+entity elevador is
 --Declaracao dos generics------------------------------------------------------
   
 --Declaracao das entradas e saidas---------------------------------------------
@@ -34,12 +34,12 @@ entity top_level is
 		LED                 : OUT std_logic_vector(2 downto 0);
 		Alarme              : OUT std_logic_vector(3 downto 0)
   );
-end top_level;
+end elevador;
 
 --------------------------------------------------------------------------------
 --Declaracao da logica
 --------------------------------------------------------------------------------
-architecture top_level of top_level is
+architecture elevador of elevador is
 	-----------------------------------
 	-- Tipos 
 	-----------------------------------
@@ -67,12 +67,10 @@ begin
 	-----------------------------
 	-- Atribuicoes Assincronas --
 	-----------------------------	
-	--aqui vai uma lógica básica, das portas e tal 
-	--no arquivo da FSM vai a lógica mais 'pesada'
+
 	---------------
 	-- Processos --
-	--arquivo TOP LEVEL não deve ter processo
 	---------------
 
 	
-end top_level;
+end elevador;

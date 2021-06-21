@@ -1,1 +1,2 @@
 xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.syr" 
+xst -intstyle ise -ifn "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.xst" -ofn "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.syr" 
