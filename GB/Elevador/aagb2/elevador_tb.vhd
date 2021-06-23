@@ -144,7 +144,9 @@ BEGIN
    stim_proc: process
    begin		
     
-   wait until rising_edge(clock);
+    reset <= '1';
+		wait for tempo_processo;
+		reset <= '0';
 		
     -- Elevador no primeiro andar, chamado nos andares 2 e 3
     sensor_porta <= '1';
