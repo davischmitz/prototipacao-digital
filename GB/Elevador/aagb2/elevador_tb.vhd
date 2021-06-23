@@ -270,6 +270,41 @@ BEGIN
     btn_andar_2_externo <= '0';
     btn_andar_3_interno <= '0';
     btn_andar_3_externo <= '0';
+
+    wait for tempo_processo;
+    wait for tempo_processo;
+
+    --Emergencia por 2 fins de curso ativos simultaneamente
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '1';
+    FC2 <= '1';
+    FC3 <= '0';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+
+    wait for tempo_processo;
+    wait for tempo_processo;
+
+
+    --Botão de emergencia pressionado
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '0';
+    FC1 <= '1';
+    FC2 <= '0';
+    FC3 <= '0';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
     
     
     wait;
