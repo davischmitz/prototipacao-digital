@@ -1,2 +1,4 @@
+vhdl isim_temp "controle_saidas.vhd"
 vhdl isim_temp "controle_estados.vhd"
+vhdl isim_temp "elevador.vhd"
 vhdl isim_temp "elevador_tb.vhd"

@@ -23,16 +23,30 @@ entity elevador is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
-		Andar1              : IN std_logic;
-		Andar2              : IN std_logic;
-		Andar3              : IN std_logic;
-		Porta               : IN std_logic;
-		Emergencia          : IN std_logic;
-		SensorFimDeCurso	  : IN std_logic;
-		Motor_Subindo       : OUT std_logic;    
-		Motor_Descendo      : OUT std_logic;    
-		LED                 : OUT std_logic_vector(2 downto 0);
-		Alarme              : OUT std_logic_vector(3 downto 0)
+		clock		                : IN std_logic;
+	  reset						        : IN std_logic;
+    sensor_porta            : IN std_logic;
+    sensor_incendio         : IN std_logic;
+    btn_emergencia          : IN std_logic;
+    FC1                     : IN std_logic;
+    FC2                     : IN std_logic;
+    FC3                     : IN std_logic;
+    btn_andar_1_interno     : IN std_logic;
+    btn_andar_1_externo     : IN std_logic;
+    btn_andar_2_interno     : IN std_logic;
+    btn_andar_2_externo     : IN std_logic;
+    btn_andar_3_interno     : IN std_logic;
+    btn_andar_3_externo     : IN std_logic;
+
+    motor_subindo           : OUT std_logic;
+    motor_descendo          : OUT std_logic;
+    indicador_andar_1       : OUT std_logic;
+    indicador_andar_2       : OUT std_logic;
+    indicador_andar_3       : OUT std_logic;
+    indicador_subindo       : OUT std_logic;
+    indicador_descendo      : OUT std_logic;
+    alarme_emergencia       : OUT std_logic;
+    trava_porta             : OUT std_logic
   );
 end elevador;
 
@@ -57,12 +71,43 @@ architecture elevador of elevador is
 	-----------------------------------
 	-- Declaracoes de sinais
 	-----------------------------------
-	
+  signal estado_aux: std_logic_vector(2 downto 0);
 	
 begin
 	------------------
 	-- Port Mapping --
 	------------------
+  estados: entity work.controle_estados
+			port map (
+				clock => clock,
+        reset => reset,
+        sensor_porta => sensor_porta,
+        sensor_incendio => sensor_incendio,
+        btn_emergencia => btn_emergencia,
+        FC1 => FC1,
+        FC2 => FC2,
+        FC3 => FC3,
+        btn_andar_1_interno => btn_andar_1_interno,
+        btn_andar_1_externo => btn_andar_1_externo,
+        btn_andar_2_interno => btn_andar_2_interno,
+        btn_andar_2_externo => btn_andar_2_externo,
+        btn_andar_3_interno => btn_andar_3_interno,
+        btn_andar_3_externo => btn_andar_3_externo,
+        saida_estado => estado_aux
+			);
+  saidas: entity work.controle_saidas
+      port map (
+        entrada_estado => estado_aux,
+        motor_subindo => motor_subindo,
+        motor_descendo => motor_descendo,
+        indicador_andar_1 => indicador_andar_1,
+        indicador_andar_2 => indicador_andar_2,
+        indicador_andar_3 => indicador_andar_3,
+        indicador_subindo => indicador_subindo,
+        indicador_descendo => indicador_descendo,
+        alarme_emergencia => alarme_emergencia,
+        trava_porta => trava_porta
+      );
 	
 	-----------------------------
 	-- Atribuicoes Assincronas --

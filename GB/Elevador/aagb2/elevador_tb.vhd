@@ -51,10 +51,10 @@ ARCHITECTURE behavior OF elevador_tb IS
 	-- Declaration of components
 	-----------------------------------
  
-    COMPONENT controle_estados
+    COMPONENT elevador
     PORT(
          clock : IN  std_logic;
-			reset : IN std_logic;
+			   reset : IN std_logic;
          sensor_porta : IN  std_logic;
          sensor_incendio : IN  std_logic;
          btn_emergencia : IN  std_logic;
@@ -67,7 +67,16 @@ ARCHITECTURE behavior OF elevador_tb IS
          btn_andar_2_externo : IN  std_logic;
          btn_andar_3_interno : IN  std_logic;
          btn_andar_3_externo : IN  std_logic;
-         saida_estado : OUT  std_logic_vector(2 downto 0)
+
+         motor_subindo: OUT std_logic;
+         motor_descendo: OUT std_logic;
+         indicador_andar_1: OUT std_logic;
+         indicador_andar_2: OUT std_logic;
+         indicador_andar_3: OUT std_logic;
+         indicador_subindo: OUT std_logic;
+         indicador_descendo: OUT std_logic;
+         alarme_emergencia: OUT std_logic;
+         trava_porta: OUT std_logic
         );
     END COMPONENT;
     
@@ -77,23 +86,30 @@ ARCHITECTURE behavior OF elevador_tb IS
 	-----------------------------------
 	
 	--Inputs
-   signal clock : std_logic := '0';
-	 signal reset : std_logic := '0';
-   signal sensor_porta : std_logic := '0';
-   signal sensor_incendio : std_logic := '0';
-   signal btn_emergencia : std_logic := '0';
-   signal FC1 : std_logic := '0';
-   signal FC2 : std_logic := '0';
-   signal FC3 : std_logic := '0';
-   signal btn_andar_1_interno : std_logic := '0';
-   signal btn_andar_1_externo : std_logic := '0';
-   signal btn_andar_2_interno : std_logic := '0';
-   signal btn_andar_2_externo : std_logic := '0';
-   signal btn_andar_3_interno : std_logic := '0';
-   signal btn_andar_3_externo : std_logic := '0';
-
- 	--Outputs
-   signal saida_estado : std_logic_vector(2 downto 0) := "000";
+  signal clock : std_logic := '0';
+	signal reset : std_logic := '0';
+  signal sensor_porta : std_logic := '0';
+  signal sensor_incendio : std_logic := '0';
+  signal btn_emergencia : std_logic := '0';
+  signal FC1 : std_logic := '0';
+  signal FC2 : std_logic := '0';
+  signal FC3 : std_logic := '0';
+  signal btn_andar_1_interno : std_logic := '0';
+  signal btn_andar_1_externo : std_logic := '0';
+  signal btn_andar_2_interno : std_logic := '0';
+  signal btn_andar_2_externo : std_logic := '0';
+  signal btn_andar_3_interno : std_logic := '0';
+  signal btn_andar_3_externo : std_logic := '0'; 
+  --Outputs
+  signal motor_subindo : std_logic := '0';
+  signal motor_descendo : std_logic := '0';
+  signal indicador_andar_1 : std_logic := '0';
+  signal indicador_andar_2 : std_logic := '0';
+  signal indicador_andar_3 : std_logic := '0';
+  signal indicador_subindo : std_logic := '0';
+  signal indicador_descendo : std_logic := '0';
+  signal alarme_emergencia : std_logic := '0';
+  signal trava_porta : std_logic := '0';
 
    -- Clock period definitions
 	constant C_period : time := 13 ns; 
@@ -104,9 +120,9 @@ BEGIN
 	------------------
 	-- Port Mapping --
 	------------------
-   uut: controle_estados PORT MAP (
+   uut: elevador PORT MAP (
           clock => clock,
-			 reset => reset,
+			    reset => reset,
           sensor_porta => sensor_porta,
           sensor_incendio => sensor_incendio,
           btn_emergencia => btn_emergencia,
@@ -119,7 +135,15 @@ BEGIN
           btn_andar_2_externo => btn_andar_2_externo,
           btn_andar_3_interno => btn_andar_3_interno,
           btn_andar_3_externo => btn_andar_3_externo,
-          saida_estado => saida_estado
+          motor_subindo => motor_subindo,
+          motor_descendo => motor_descendo,
+          indicador_andar_1 => indicador_andar_1,
+          indicador_andar_2 => indicador_andar_2,
+          indicador_andar_3 => indicador_andar_3,
+          indicador_subindo => indicador_subindo,
+          indicador_descendo => indicador_descendo,
+          alarme_emergencia => alarme_emergencia,
+          trava_porta => trava_porta
         );
 
 	-----------------------------

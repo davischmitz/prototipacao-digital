@@ -1,4 +1,8 @@
-EN controle_estados NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl02 1624236707
+EN controle_estados NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl02 1624420741
+EN controle_saidas NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_saidas.vhd" sub00/vhpl04 1624420743
+EN elevador NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador.vhd" sub00/vhpl06 1624420745
 AR top_level top_level "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd" sub00/vhpl01 1624060048
-AR controle_estados controle_estados "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl03 1624224817
+AR controle_saidas controle_saidas "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_saidas.vhd" sub00/vhpl05 1624420744
+AR elevador elevador "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador.vhd" sub00/vhpl07 1624420746
+AR controle_estados controle_estados "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" sub00/vhpl03 1624420742
 EN top_level NULL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/top_level.vhd" sub00/vhpl00 1624060047

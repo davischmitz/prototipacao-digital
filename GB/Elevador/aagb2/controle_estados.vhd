@@ -24,7 +24,7 @@ entity controle_estados is
 --Declaracao das entradas e saidas---------------------------------------------
   port (
     clock		            : IN std_logic;
-	 reset						: IN std_logic;
+	  reset						: IN std_logic;
     sensor_porta           : IN std_logic;
     sensor_incendio        : IN std_logic;
     btn_emergencia         : IN std_logic;
@@ -73,9 +73,6 @@ architecture controle_estados of controle_estados is
   signal fins_de_curso_andar_1: std_logic := '0';
   signal fins_de_curso_andar_2: std_logic := '0';
   signal fins_de_curso_andar_3: std_logic := '0';
-
-  signal fins_de_curso_subindo: std_logic := '0';
-  signal fins_de_curso_descendo: std_logic := '0';
 	
 	
 begin
@@ -96,9 +93,6 @@ begin
   fins_de_curso_andar_1  <= FC1 and (not FC2) and (not FC3);
   fins_de_curso_andar_2  <= (not FC1) and FC2 and (not FC3);
   fins_de_curso_andar_3  <= (not FC1) and (not FC2) and FC3;
-
-  fins_de_curso_subindo  <= (not FC1) and (not FC2) and (not FC3);
-  fins_de_curso_descendo <= (not FC1) and (not FC2) and (not FC3);
   
 	---------------
 	-- Processos --

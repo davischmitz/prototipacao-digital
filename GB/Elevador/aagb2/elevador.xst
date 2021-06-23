@@ -1,0 +1,5 @@
+set -tmpdir "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/xst/projnav.tmp"
+set -xsthdpdir "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/xst"
+elaborate
+-ifn elevador.prj
+-ifmt mixed

@@ -1,2 +1,4 @@
+vhdl work "controle_saidas.vhd"
 vhdl work "controle_estados.vhd"
+vhdl work "elevador.vhd"
 vhdl work "elevador_tb.vhd"

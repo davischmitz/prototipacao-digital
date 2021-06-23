@@ -1,9 +1,11 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb_isim_beh.exe" -prj "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb_beh.prj" "elevador_tb" 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb_isim_beh.exe -prj D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb_beh.prj elevador_tb 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+Parsing VHDL file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_saidas.vhd" into library work
 Parsing VHDL file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" into library work
+Parsing VHDL file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador.vhd" into library work
 Parsing VHDL file "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
@@ -12,9 +14,12 @@ Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling architecture controle_estados of entity controle_estados [controle_estados_default]
+Compiling architecture controle_saidas of entity controle_saidas [controle_saidas_default]
+Compiling architecture elevador of entity elevador [elevador_default]
 Compiling architecture behavior of entity elevador_tb
 Time Resolution for simulation is 1ps.
-Compiled 7 VHDL Units
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
 Built simulation executable D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/elevador_tb_isim_beh.exe
-Fuse Memory Usage: 34768 KB
-Fuse CPU Usage: 374 ms
+Fuse Memory Usage: 34692 KB
+Fuse CPU Usage: 453 ms
