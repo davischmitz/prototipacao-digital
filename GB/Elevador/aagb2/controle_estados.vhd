@@ -166,13 +166,15 @@ begin
         when SUBINDO =>
           saida_estado <= "100";
           -- verificacoes de seguranca
-          if (checklist_seguranca = '1' and fins_de_curso_subindo = '1') then
-            if (btn_andar_2 = '1') then
+          if (checklist_seguranca = '1') then
+            if (fins_de_curso_andar_2 = '1' and (btn_andar_2 = '1' or btn_andar_3 = '1')) then
               -- subindo para o andar 2
               estado <= ANDAR2;
-            elsif (btn_andar_3 = '1') then
+            elsif (fins_de_curso_andar_3 = '1' and btn_andar_3 = '1') then
               -- subindo para o andar 3
               estado <= ANDAR3;
+            else 
+              estado <= SUBINDO;
             end if;
           else 
               estado <= EMERGENCIA;
@@ -181,12 +183,14 @@ begin
         when DESCENDO =>
           saida_estado <= "101"; 
           if (checklist_seguranca = '1') then
-            if (fins_de_curso_andar_2 = '1') then
+            if (fins_de_curso_andar_2 = '1' and (btn_andar_2 = '1' or btn_andar_1 = '1')) then
               -- descendo para o andar 2
               estado <= ANDAR2;
-            elsif (fins_de_curso_andar_1 = '1') then
+            elsif (fins_de_curso_andar_1 = '1' and btn_andar_1 = '1') then
               -- descendo para o andar 1
               estado <= ANDAR1;
+            else 
+              estado <= DESCENDO;
             end if;
           else 
             estado <=EMERGENCIA;

@@ -163,21 +163,6 @@ BEGIN
 		btn_andar_3_externo <= '1';
 		
 		wait for tempo_processo;
-
-    -- Elevador subindo
-    sensor_porta <= '1';
-		sensor_incendio <= '1';
-		btn_emergencia <= '1';
-		FC1 <= '0';
-		FC2 <= '0';
-		FC3 <= '0';
-		btn_andar_1_interno <= '0';
-		btn_andar_1_externo <= '0';
-		btn_andar_2_interno <= '1';
-		btn_andar_2_externo <= '0';
-		btn_andar_3_interno <= '0';
-		btn_andar_3_externo <= '1';
-
     wait for tempo_processo;
 		
     -- Elevador no segundo andar, chamado no andar 3
@@ -195,25 +180,10 @@ BEGIN
 		btn_andar_3_externo <= '1';
 
     wait for tempo_processo;
-
-    -- Elevador subindo
-    sensor_porta <= '1';
-		sensor_incendio <= '1';
-		btn_emergencia <= '1';
-		FC1 <= '0';
-		FC2 <= '0';
-		FC3 <= '0';
-		btn_andar_1_interno <= '0';
-		btn_andar_1_externo <= '0';
-		btn_andar_2_interno <= '0';
-		btn_andar_2_externo <= '0';
-		btn_andar_3_interno <= '0';
-		btn_andar_3_externo <= '1';
-
     wait for tempo_processo;
 
     -- Elevador no 3 andar
-    sensor_porta <= '1';
+		sensor_porta <= '1';
 		sensor_incendio <= '1';
 		btn_emergencia <= '1';
 		FC1 <= '0';
@@ -224,8 +194,9 @@ BEGIN
 		btn_andar_2_interno <= '0';
 		btn_andar_2_externo <= '0';
 		btn_andar_3_interno <= '0';
-		btn_andar_3_externo <= '0';
+		btn_andar_3_externo <= '1';
 
+    wait for tempo_processo;
     wait for tempo_processo;
 
     -- Elevador no 3 andar chamado no andar 1
@@ -243,21 +214,6 @@ BEGIN
     btn_andar_3_externo <= '0';
 
     wait for tempo_processo;
-
-    -- Elevador descendo
-    sensor_porta <= '1';
-    sensor_incendio <= '1';
-    btn_emergencia <= '1';
-    FC1 <= '0';
-    FC2 <= '0';
-    FC3 <= '0';
-    btn_andar_1_interno <= '1';
-    btn_andar_1_externo <= '0';
-    btn_andar_2_interno <= '0';
-    btn_andar_2_externo <= '0';
-    btn_andar_3_interno <= '0';
-    btn_andar_3_externo <= '0';
-
     wait for tempo_processo;
 
     -- Elevador no 2 andar chamado no andar 1
@@ -275,21 +231,6 @@ BEGIN
     btn_andar_3_externo <= '0';
     
     wait for tempo_processo;
-
-    -- Elevador descendo
-    sensor_porta <= '1';
-    sensor_incendio <= '1';
-    btn_emergencia <= '1';
-    FC1 <= '0';
-    FC2 <= '0';
-    FC3 <= '0';
-    btn_andar_1_interno <= '1';
-    btn_andar_1_externo <= '0';
-    btn_andar_2_interno <= '0';
-    btn_andar_2_externo <= '0';
-    btn_andar_3_interno <= '0';
-    btn_andar_3_externo <= '0';
-    
     wait for tempo_processo;
 
     -- Elevador no 1 andar
@@ -299,7 +240,7 @@ BEGIN
     FC1 <= '1';
     FC2 <= '0';
     FC3 <= '0';
-    btn_andar_1_interno <= '0';
+    btn_andar_1_interno <= '1';
     btn_andar_1_externo <= '0';
     btn_andar_2_interno <= '0';
     btn_andar_2_externo <= '0';
