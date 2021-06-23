@@ -143,10 +143,8 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- insert stimulus here 
-		reset <= '1';
-		wait for tempo_processo;
-		reset <= '0';
+    
+   wait until rising_edge(clock);
 		
     -- Elevador no primeiro andar, chamado nos andares 2 e 3
     sensor_porta <= '1';
@@ -225,6 +223,87 @@ BEGIN
 		btn_andar_2_externo <= '0';
 		btn_andar_3_interno <= '0';
 		btn_andar_3_externo <= '0';
+
+    wait for tempo_processo;
+
+    -- Elevador no 3 andar chamado no andar 1
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '0';
+    FC2 <= '0';
+    FC3 <= '1';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+
+    wait for tempo_processo;
+
+    -- Elevador descendo
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '0';
+    FC2 <= '0';
+    FC3 <= '0';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+
+    wait for tempo_processo;
+
+    -- Elevador no 2 andar chamado no andar 1
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '0';
+    FC2 <= '1';
+    FC3 <= '0';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+    
+    wait for tempo_processo;
+
+    -- Elevador descendo
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '0';
+    FC2 <= '0';
+    FC3 <= '0';
+    btn_andar_1_interno <= '1';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+    
+    wait for tempo_processo;
+
+    -- Elevador no 1 andar
+    sensor_porta <= '1';
+    sensor_incendio <= '1';
+    btn_emergencia <= '1';
+    FC1 <= '1';
+    FC2 <= '0';
+    FC3 <= '0';
+    btn_andar_1_interno <= '0';
+    btn_andar_1_externo <= '0';
+    btn_andar_2_interno <= '0';
+    btn_andar_2_externo <= '0';
+    btn_andar_3_interno <= '0';
+    btn_andar_3_externo <= '0';
+    
     
     wait;
    end process;

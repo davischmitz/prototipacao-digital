@@ -73,8 +73,6 @@ architecture controle_estados of controle_estados is
   signal fins_de_curso_andar_1: std_logic := '0';
   signal fins_de_curso_andar_2: std_logic := '0';
   signal fins_de_curso_andar_3: std_logic := '0';
-  signal fins_de_curso_subindo: std_logic := '0';
-  signal fins_de_curso_descendo: std_logic := '0';
 	
 	
 begin
@@ -95,17 +93,7 @@ begin
   fins_de_curso_andar_1  <= FC1 and (not FC2) and (not FC3);
   fins_de_curso_andar_2  <= (not FC1) and FC2 and (not FC3);
   fins_de_curso_andar_3  <= (not FC1) and (not FC2) and FC3;
-  fins_de_curso_subindo  <= (not FC1) and (not FC2) and (not FC3);
-  fins_de_curso_descendo <= (not FC1) and (not FC2) and (not FC3);
   
-  -- saida_estado <= "000" when estado = ANDAR1;
-  -- saida_estado <= "001" when estado = ANDAR2;
-  -- saida_estado <= "010" when estado = ANDAR3 else "000";
-  -- saida_estado <= "011" when estado = SUBINDO else "000";
-  -- saida_estado <= "100" when estado = DESCENDO else "000";
-  -- saida_estado <= "101" when estado = EMERGENCIA else "000";
-
-
 	---------------
 	-- Processos --
 	---------------
@@ -134,58 +122,72 @@ begin
             else 
               estado <= ANDAR1;
             end if;
-          else 
-              estado <= EMERGENCIA;
-          end if;
-		  when ANDAR2 =>
-        saida_estado <= "001";
-        -- verificacoes de seguranca
-        if (checklist_seguranca = '1' and fins_de_curso_andar_2 = '1') then
-          -- subindo
-          if ((btn_andar_1 = '0') and btn_andar_2 = '0' and btn_andar_3 = '1') then
-            estado <= SUBINDO;
-          -- descendo
-          elsif (btn_andar_1 = '1' and btn_andar_2 = '0' and btn_andar_3 = '0') then
-            estado <= DESCENDO;
-          else 
-            estado <= ANDAR2;
-          end if;
-        else 
+          else
             estado <= EMERGENCIA;
-        end if;
-      when ANDAR3 => 
-        saida_estado <= "010";
-        -- verificacoes de seguranca
-        if (checklist_seguranca = '1' and fins_de_curso_andar_3 = '1') then
-          -- descendo
-          if ((btn_andar_1 = '1' or btn_andar_2 = '1') and btn_andar_3 = '0') then
-            estado <= DESCENDO;
-          else 
-            estado <= ANDAR3;
           end if;
-        else 
+		  
+        when ANDAR2 =>
+          saida_estado <= "001";
+          -- verificacoes de seguranca
+          if (checklist_seguranca = '1' and fins_de_curso_andar_2 = '1') then
+            -- subindo 
+            if (btn_andar_1 = '0' and btn_andar_2 = '0' and btn_andar_3 = '1') then
+              estado <= SUBINDO;
+            -- descendo
+            elsif (btn_andar_1 = '1' and btn_andar_2 = '0' and btn_andar_3 = '0') then
+              estado <= DESCENDO;
+            else 
+              estado <= ANDAR2;
+            end if;
+          else 
             estado <= EMERGENCIA;
-        end if;
-      when SUBINDO =>
-        saida_estado <= "100";
-        -- verificacoes de seguranca
-        if (checklist_seguranca = '1' and fins_de_curso_subindo = '1') then
-          if (btn_andar_2 = '1') then
+          end if;
+      
+        when ANDAR3 => 
+          saida_estado <= "010";
+          -- verificacoes de seguranca
+          if (checklist_seguranca = '1' and fins_de_curso_andar_3 = '1') then 
+            -- descendo
+            if ((btn_andar_1 = '1' or btn_andar_2 = '1') and btn_andar_3 = '0') then
+              estado <= DESCENDO;
+            else 
+              estado <= ANDAR3;
+            end if;
+          else 
+            estado <= EMERGENCIA;
+          end if;
+
+        when SUBINDO =>
+          saida_estado <= "100";
+          -- verificacoes de seguranca
+          if (checklist_seguranca = '1') then
+            if (fins_de_curso_andar_2 = '1') then
             -- subindo para o andar 2
-            estado <= ANDAR2;
-          elsif (btn_andar_3 = '1') then
+              estado <= ANDAR2;
+            elsif (fins_de_curso_andar_3 = '1') then
             -- subindo para o andar 3
-            estado <= ANDAR3;
+              estado <= ANDAR3;
+            end if;
+          else 
+            estado <= EMERGENCIA; 
           end if;
-        else 
-            estado <= EMERGENCIA;
-        end if;
-        
-      when DESCENDO =>
-        saida_estado <= "101"; 
-        estado <= EMERGENCIA;
-      when EMERGENCIA => 
-        saida_estado <= "101";
+
+        when DESCENDO =>
+          saida_estado <= "101"; 
+          if (checklist_seguranca = '1') then
+            if (fins_de_curso_andar_2 = '1') then
+              -- descendo para o andar 2
+              estado <= ANDAR2;
+            elsif (fins_de_curso_andar_1 = '1') then
+              -- descendo para o andar 1
+              estado <= ANDAR1;
+            end if;
+          else 
+            estado <=EMERGENCIA;
+          end if;
+          
+        when EMERGENCIA => 
+          saida_estado <= "110";
       end case;
     end if;
   end process;

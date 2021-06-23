@@ -2,9 +2,9 @@ Command line:
    elevador_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  56722
+     -socket  62991
 
-Sun Jun 20 23:00:47 2021
+Tue Jun 22 22:09:53 2021
 
 
  Elaboration Time: 0.03125 sec
