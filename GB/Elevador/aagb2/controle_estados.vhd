@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
--- DESIGN NAME  : fsm.vhd
+-- DESIGN NAME  : controle_estados.vhd
 -- NAME         : 
 -- PROJECT      : Elevador de tr�s pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
@@ -23,8 +23,8 @@ entity controle_estados is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
-    clock		               : IN std_logic;
-	  reset						       : IN std_logic;
+    clock		            : IN std_logic;
+	 reset						: IN std_logic;
     sensor_porta           : IN std_logic;
     sensor_incendio        : IN std_logic;
     btn_emergencia         : IN std_logic;
@@ -98,7 +98,7 @@ begin
 	-- Processos --
 	---------------
   process(clock, 
-			    reset,
+			 reset,
           checklist_seguranca, 
           fins_de_curso_andar_1, 
           fins_de_curso_andar_2, 
@@ -110,7 +110,7 @@ begin
 	  if reset = '1' then
       saida_estado <= "000";
 		  estado <= ANDAR1;
-    elsif rising_edge(clock) and reset = '0' then
+    elsif rising_edge(clock) and reset = '0' then --rising_edge � s� pra usar a borda de subida de clock pra trocar os estados
       case estado is
         when ANDAR1 =>
           saida_estado <= "000";
@@ -185,7 +185,7 @@ begin
           else 
             estado <=EMERGENCIA;
           end if;
-          
+
         when EMERGENCIA => 
           saida_estado <= "110";
       end case;
