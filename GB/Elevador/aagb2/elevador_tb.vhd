@@ -104,7 +104,7 @@ ARCHITECTURE behavior OF elevador_tb IS
 
    -- Clock period definitions
 	constant C_period       : time := 13 ns; 
-	constant tempo_processo : time := 14 ns;
+	constant tempo_processo : time := 50 ns; --14
  
 BEGIN
  
@@ -165,12 +165,13 @@ BEGIN
 		reset <= '0';
 		
       -- Elevador no primeiro andar, chamado nos andares 2 e 3
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-		sensor_incendio <= '1'; -- sensor de incêndio não está ativo
-		btn_emergencia <= '1'; -- botao de emergência não está ativo
-		FC1 <= '1'; -- nível lógico alto pois o elevador está no primeiro andar
-		FC2 <= '0'; -- nível baixo pois o elevador não está no segundo andar
-		FC3 <= '0'; -- nível baixo pois o elevador não está no terceiro andar
+		--Primeiro andar para o subindo: 111100001000 OR 111100000001
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+		sensor_incendio     <= '1'; -- sensor de incêndio não está ativo
+		btn_emergencia      <= '1'; -- botao de emergência não está ativo
+		FC1                 <= '1'; -- nível lógico alto pois o elevador está no primeiro andar
+		FC2                 <= '0'; -- nível baixo pois o elevador não está no segundo andar
+		FC3                 <= '0'; -- nível baixo pois o elevador não está no terceiro andar
 		btn_andar_1_interno <= '0';
 		btn_andar_1_externo <= '0';
 		btn_andar_2_interno <= '1'; 
@@ -178,35 +179,35 @@ BEGIN
 		btn_andar_3_interno <= '0';
 		btn_andar_3_externo <= '1'; --alguém de fora do elevador chama o andar 
 		
-		--espera por 28s
+		--espera por tempo_processo s
 		wait for tempo_processo;
-      wait for tempo_processo;
 		
       -- Elevador no segundo andar, chamado no andar 3
-		sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-		sensor_incendio <= '1'; -- sensor de incêndio não está ativo
-		btn_emergencia <= '1'; -- botão de emergência não está ativo
-		FC1 <= '0'; 
-		FC2 <= '1'; -- nível lógico alto pois o elevador está no segundo andar
-		FC3 <= '0';
+		-- Segundo andar para o subindo: 11101000001
+		sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+		sensor_incendio     <= '1'; -- sensor de incêndio não está ativo
+		btn_emergencia      <= '1'; -- botão de emergência não está ativo
+		FC1                 <= '0'; 
+		FC2                 <= '1'; -- nível lógico alto pois o elevador está no 2 andar
+		FC3                 <= '0';
 		btn_andar_1_interno <= '0';
 		btn_andar_1_externo <= '0';
 		btn_andar_2_interno <= '0';
 		btn_andar_2_externo <= '0';
 		btn_andar_3_interno <= '0';
-		btn_andar_3_externo <= '1';
+		btn_andar_3_externo <= '1'; --alguém de fora do elevador chama o elevador no 3 andar 
 
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       -- Elevador no 3 andar
-		sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-		sensor_incendio <= '1';
-		btn_emergencia <= '1';
-		FC1 <= '0';
-		FC2 <= '0';
-		FC3 <= '1'; -- nível lógico alto pois o elevador está no terceiro andar
+		-- Subindo para o Terceiro andar: 111001000001
+		sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+		sensor_incendio     <= '1';
+		btn_emergencia      <= '1';
+		FC1                 <= '0';
+		FC2                 <= '0';
+		FC3                 <= '1'; -- nível lógico alto pois o elevador está no terceiro andar
 		btn_andar_1_interno <= '0';
 		btn_andar_1_externo <= '0';
 		btn_andar_2_interno <= '0';
@@ -214,17 +215,17 @@ BEGIN
 		btn_andar_3_interno <= '0';
 		btn_andar_3_externo <= '1';
 
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       -- Elevador no 3 andar chamado no andar 1
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-      sensor_incendio <= '1';
-      btn_emergencia <= '1';
-      FC1 <= '0';
-      FC2 <= '0';
-      FC3 <= '1';
+		-- Terceiro andar para o descida : 111001100000
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+      sensor_incendio     <= '1';
+      btn_emergencia      <= '1';
+      FC1                 <= '0';
+      FC2                 <= '0';
+      FC3                 <= '1';
       btn_andar_1_interno <= '1';
       btn_andar_1_externo <= '0';
       btn_andar_2_interno <= '0';
@@ -232,17 +233,16 @@ BEGIN
       btn_andar_3_interno <= '0';
       btn_andar_3_externo <= '0';
 
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       -- Elevador no 2 andar chamado no andar 1
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-      sensor_incendio <= '1';
-      btn_emergencia <= '1';
-      FC1 <= '0';
-      FC2 <= '1';
-      FC3 <= '0';
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+      sensor_incendio     <= '1';
+      btn_emergencia      <= '1';
+      FC1                 <= '0';
+      FC2                 <= '1';
+      FC3                 <= '0';
       btn_andar_1_interno <= '1';
       btn_andar_1_externo <= '0';
       btn_andar_2_interno <= '0';
@@ -250,17 +250,16 @@ BEGIN
       btn_andar_3_interno <= '0';
       btn_andar_3_externo <= '0';
     
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       -- Elevador no 1 andar
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-      sensor_incendio <= '1';
-      btn_emergencia <= '1';
-      FC1 <= '1';
-      FC2 <= '0';
-      FC3 <= '0';
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+      sensor_incendio     <= '1';
+      btn_emergencia      <= '1';
+      FC1                 <= '1';
+      FC2                 <= '0';
+      FC3                 <= '0';
       btn_andar_1_interno <= '1';
       btn_andar_1_externo <= '0';
       btn_andar_2_interno <= '0';
@@ -268,17 +267,16 @@ BEGIN
       btn_andar_3_interno <= '0';
       btn_andar_3_externo <= '0';
 
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       --Emergencia por 2 fins de curso ativos simultaneamente
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-      sensor_incendio <= '1';
-      btn_emergencia <= '1';
-      FC1 <= '1';
-      FC2 <= '1';
-      FC3 <= '0';
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+      sensor_incendio     <= '1';
+      btn_emergencia      <= '1';
+      FC1                 <= '1';
+      FC2                 <= '1';
+      FC3                 <= '0';
       btn_andar_1_interno <= '1';
       btn_andar_1_externo <= '0';
       btn_andar_2_interno <= '0';
@@ -286,18 +284,16 @@ BEGIN
       btn_andar_3_interno <= '0';
       btn_andar_3_externo <= '0';
 
-		-- fica em espera por 28s
-      wait for tempo_processo;
-      wait for tempo_processo;
-
+		--espera por tempo_processo s
+		wait for tempo_processo;
 
       --Botao de emergencia pressionado
-      sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
-      sensor_incendio <= '1';
-      btn_emergencia <= '0';
-      FC1 <= '1';
-      FC2 <= '0';
-      FC3 <= '0';
+      sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
+      sensor_incendio     <= '1';
+      btn_emergencia      <= '0';
+      FC1                 <= '1';
+      FC2                 <= '0';
+      FC3                 <= '0';
       btn_andar_1_interno <= '1';
       btn_andar_1_externo <= '0';
       btn_andar_2_interno <= '0';

@@ -81,7 +81,10 @@ begin
     indicador_subindo  <= '0';
     indicador_descendo <= '0';
     alarme_emergencia  <= '0';
-    trava_porta        <= '1'; -- porta travada por default
+    trava_porta        <= '1'; -- porta travada por default 
+										 -- indicadores das portas sao para saber se ela ta aberta
+										 -- mas a porta so pode ser aberta quando esta destravada, 
+										 -- ou seja, nivel logico baixo, '0', no trava_porta
 
 	  case entrada_estado is
       when "000" => -- ANDAR1

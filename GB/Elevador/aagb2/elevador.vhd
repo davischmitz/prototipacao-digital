@@ -31,12 +31,12 @@ entity elevador is
     FC1                     : IN std_logic; -- Fim de curso do andar 1
     FC2                     : IN std_logic; -- Fim de curso do andar 2
     FC3                     : IN std_logic; -- Fim de curso do andar 3
-    btn_andar_1_interno     : IN std_logic;
-    btn_andar_1_externo     : IN std_logic;
-    btn_andar_2_interno     : IN std_logic;
-    btn_andar_2_externo     : IN std_logic;
-    btn_andar_3_interno     : IN std_logic;
-    btn_andar_3_externo     : IN std_logic;
+    btn_andar_1_interno     : IN std_logic; -- botão interno do andar 1
+    btn_andar_1_externo     : IN std_logic; -- botão externo do andar 1
+    btn_andar_2_interno     : IN std_logic; -- botão interno do andar 2
+    btn_andar_2_externo     : IN std_logic; -- botão externo do andar 2
+    btn_andar_3_interno     : IN std_logic; -- botão interno do andar 3
+    btn_andar_3_externo     : IN std_logic; -- botão externo do andar 3
 
     motor_subindo           : OUT std_logic; -- Estado do motor subindo
     motor_descendo          : OUT std_logic; -- Estado do motor descendo
@@ -46,7 +46,7 @@ entity elevador is
     indicador_subindo       : OUT std_logic;
     indicador_descendo      : OUT std_logic;
     alarme_emergencia       : OUT std_logic; -- Alarme de emergencia
-    trava_porta             : OUT std_logic  -- Medida de seguranca
+    trava_porta             : OUT std_logic  -- Medida de seguranca, porta fica travada por default
   );
 end elevador;
 

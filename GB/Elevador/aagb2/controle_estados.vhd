@@ -82,7 +82,6 @@ architecture controle_estados of controle_estados is
   signal fins_de_curso_andar_2: std_logic := '0';
   signal fins_de_curso_andar_3: std_logic := '0';
 	
-	
 begin
 	------------------
 	-- Port Mapping --
