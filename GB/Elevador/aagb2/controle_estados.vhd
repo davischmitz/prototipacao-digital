@@ -28,9 +28,9 @@ entity controle_estados is
     sensor_porta           : IN std_logic; -- seguranca ok: nivel logico alto se refere a porta travada, fechada
     sensor_incendio        : IN std_logic; -- seguranca ok: nivel logico alto se refere a sensor de incendio não ativo
     btn_emergencia         : IN std_logic; -- seguranca ok: nivel logico alto se refere a botao de emergencia não ativo
-    FC1                    : IN std_logic; -- Fim de curso do andar 1: nível lógico alto
-    FC2                    : IN std_logic; -- Fim de curso do andar 2: nível lógico alto
-    FC3                    : IN std_logic; -- Fim de curso do andar 3: nível lógico alto
+    FC1                    : IN std_logic; -- Fim de curso do andar 1: nivel lógico alto
+    FC2                    : IN std_logic; -- Fim de curso do andar 2: nivel lógico alto
+    FC3                    : IN std_logic; -- Fim de curso do andar 3: nivel lógico alto
     btn_andar_1_interno    : IN std_logic;
     btn_andar_1_externo    : IN std_logic;
     btn_andar_2_interno    : IN std_logic;
@@ -38,7 +38,7 @@ entity controle_estados is
     btn_andar_3_interno    : IN std_logic;
     btn_andar_3_externo    : IN std_logic;
 	 
-    saida_estado           : OUT std_logic_vector(2 downto 0) -- a saída do modulo e um vetor com saidas de 3 bits
+    saida_estado           : OUT std_logic_vector(2 downto 0) -- a saada do modulo e um vetor com saidas de 3 bits
 										-- saida_estado 
 										-- 000 ANDAR1
 										-- 001 ANDAR2

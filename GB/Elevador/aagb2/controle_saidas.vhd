@@ -5,7 +5,7 @@
 -- PROJECT      : Elevador de tres pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
 -- FINALITY     : Controle de saidas 
--- DEPENDENCIES : 
+-- DEPENDENCIES : Modulo com uma entrada que recebe o vetor de saida do modulo de controle de estados para realizar o controle das saidas (estado do motor, indicadores, alarmes, seguranca de travamento de porta)
 
 --------------------------------------------------------------------------------
 --Bibliotecas
@@ -23,7 +23,7 @@ entity controle_saidas is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
-    entrada_estado          : IN std_logic_vector(2 downto 0); -- recebe valor do vetor de saída do modulo de controle_estados de 3 bits
+    entrada_estado          : IN std_logic_vector(2 downto 0); -- recebe valor do vetor de saida do modulo de controle_estados de 3 bits
     motor_subindo           : OUT std_logic;
     motor_descendo          : OUT std_logic;
     indicador_andar_1       : OUT std_logic;
@@ -101,11 +101,9 @@ begin
         motor_descendo <= '1';
       when "110" => -- EMERGENCIA
         alarme_emergencia <= '1';
-	   when others =>
+	   when others => -- por precaucao tambem contemplamos esse estado
 		  alarme_emergencia <= '1';
     end case;
   end process;
 
-
-	
 end controle_saidas;
