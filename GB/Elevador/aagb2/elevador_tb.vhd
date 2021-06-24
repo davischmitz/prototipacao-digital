@@ -10,10 +10,11 @@
 --------------------------------------------------------------------------------
 --Bibliotecas
 --------------------------------------------------------------------------------
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
- 
- 
+library ieee;
+	use ieee.std_logic_1164.all;
+	use IEEE.STD_LOGIC_ARITH.ALL;    --operacoes aritmeticas
+	use IEEE.STD_LOGIC_UNSIGNED.ALL; --para trabalhar com numeros sem sinal 
+
 -------------------------------------------------------------------------------
 -- Entity
 -------------------------------------------------------------------------------  

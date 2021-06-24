@@ -83,13 +83,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1624507335" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1624507335">
+    <transform xil_pn:end_ts="1624567910" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1624567910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_estados.vhd"/>
       <outfile xil_pn:name="controle_saidas.vhd"/>
       <outfile xil_pn:name="elevador.vhd"/>
@@ -177,9 +173,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1624508264" xil_pn:in_ck="4954792090665101108" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6290955165982855983" xil_pn:start_ts="1624508255">
+    <transform xil_pn:end_ts="1624567873" xil_pn:in_ck="4954792090665101108" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6290955165982855983" xil_pn:start_ts="1624567859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="controle_estados.ngr"/>

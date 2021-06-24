@@ -1,28 +1,28 @@
 V3 18
-FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_estados.vhd 2021/06/23.22:58:06 P.20131013
-EN work/controle_estados 1624508258 \
+FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_estados.vhd 2021/06/24.17:49:29 P.20131013
+EN work/controle_estados 1624567862 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_estados.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/controle_estados/controle_estados 1624508259 \
+AR work/controle_estados/controle_estados 1624567863 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_estados.vhd \
-      EN work/controle_estados 1624508258
-FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_saidas.vhd 2021/06/23.22:58:05 P.20131013
-EN work/controle_saidas 1624508260 \
+      EN work/controle_estados 1624567862
+FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_saidas.vhd 2021/06/24.17:48:15 P.20131013
+EN work/controle_saidas 1624567864 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_saidas.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/controle_saidas/controle_saidas 1624508261 \
+AR work/controle_saidas/controle_saidas 1624567865 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_saidas.vhd \
-      EN work/controle_saidas 1624508260
-FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.vhd 2021/06/24.01:17:35 P.20131013
-EN work/elevador 1624508262 \
+      EN work/controle_saidas 1624567864
+FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.vhd 2021/06/24.17:49:29 P.20131013
+EN work/elevador 1624567866 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/elevador/elevador 1624508263 \
+AR work/elevador/elevador 1624567867 \
       FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.vhd \
-      EN work/elevador 1624508262 CP work/controle_estados CP work/controle_saidas
+      EN work/elevador 1624567866 CP work/controle_estados CP work/controle_saidas
 FL C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/top_level.vhd 2021/06/11.19:42:33 P.20131013
 FL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd" 2021/06/23.00:35:12 P.20131013
 FL "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_saidas.vhd" 2021/06/23.00:17:48 P.20131013
