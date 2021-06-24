@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_saidas.vhd";
+static const char *ng0 = "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_saidas.vhd";
 
 
 
@@ -123,32 +123,32 @@ LAB0:    xsi_set_current_line(76, ng0);
     xsi_set_current_line(86, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7203);
+    t1 = (t0 + 7111);
     t6 = xsi_mem_cmp(t1, t2, 3U);
     if (t6 == 1)
         goto LAB3;
 
-LAB10:    t4 = (t0 + 7206);
+LAB10:    t4 = (t0 + 7114);
     t7 = xsi_mem_cmp(t4, t2, 3U);
     if (t7 == 1)
         goto LAB4;
 
-LAB11:    t8 = (t0 + 7209);
+LAB11:    t8 = (t0 + 7117);
     t10 = xsi_mem_cmp(t8, t2, 3U);
     if (t10 == 1)
         goto LAB5;
 
-LAB12:    t11 = (t0 + 7212);
+LAB12:    t11 = (t0 + 7120);
     t13 = xsi_mem_cmp(t11, t2, 3U);
     if (t13 == 1)
         goto LAB6;
 
-LAB13:    t14 = (t0 + 7215);
+LAB13:    t14 = (t0 + 7123);
     t16 = xsi_mem_cmp(t14, t2, 3U);
     if (t16 == 1)
         goto LAB7;
 
-LAB14:    t17 = (t0 + 7218);
+LAB14:    t17 = (t0 + 7126);
     t19 = xsi_mem_cmp(t17, t2, 3U);
     if (t19 == 1)
         goto LAB8;

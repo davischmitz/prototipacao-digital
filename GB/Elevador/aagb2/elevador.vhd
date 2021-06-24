@@ -2,9 +2,9 @@
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
 -- DESIGN NAME  : elevador.vhd
 -- NAME         : 
--- PROJECT      : Elevador de trï¿½s pavimentos
+-- PROJECT      : Elevador de tres pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Implementaï¿½ï¿½o atravï¿½s do uso de mï¿½quina de estado de Moore e com uso de descriï¿½ï¿½o de HW estrutural, o projeto de controle de um elevador de trï¿½s andares
+-- FINALITY     : Implementar atraves do uso de maquina de estado de Moore e com uso de descricao de HW estrutural, o projeto de controle de um fsm de tres andares
 -- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------
@@ -23,14 +23,14 @@ entity elevador is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
-		clock		                : IN std_logic;
-	  reset						        : IN std_logic;
-    sensor_porta            : IN std_logic;
-    sensor_incendio         : IN std_logic;
-    btn_emergencia          : IN std_logic;
-    FC1                     : IN std_logic;
-    FC2                     : IN std_logic;
-    FC3                     : IN std_logic;
+	 clock		             : IN std_logic;
+	 reset						 : IN std_logic;
+    sensor_porta            : IN std_logic; -- Sensor de porta (aberta/fechada)
+    sensor_incendio         : IN std_logic; -- Sensor de incêndio
+    btn_emergencia          : IN std_logic; -- Botão de emergência
+    FC1                     : IN std_logic; -- Fim de curso do andar 1
+    FC2                     : IN std_logic; -- Fim de curso do andar 2
+    FC3                     : IN std_logic; -- Fim de curso do andar 3
     btn_andar_1_interno     : IN std_logic;
     btn_andar_1_externo     : IN std_logic;
     btn_andar_2_interno     : IN std_logic;
@@ -38,15 +38,15 @@ entity elevador is
     btn_andar_3_interno     : IN std_logic;
     btn_andar_3_externo     : IN std_logic;
 
-    motor_subindo           : OUT std_logic;
-    motor_descendo          : OUT std_logic;
+    motor_subindo           : OUT std_logic; -- Estado do motor subindo
+    motor_descendo          : OUT std_logic; -- Estado do motor descendo
     indicador_andar_1       : OUT std_logic;
     indicador_andar_2       : OUT std_logic;
     indicador_andar_3       : OUT std_logic;
     indicador_subindo       : OUT std_logic;
     indicador_descendo      : OUT std_logic;
-    alarme_emergencia       : OUT std_logic;
-    trava_porta             : OUT std_logic
+    alarme_emergencia       : OUT std_logic; -- Alarme de emergencia
+    trava_porta             : OUT std_logic -- Medida de seguranca
   );
 end elevador;
 
@@ -79,7 +79,7 @@ begin
 	------------------
   estados: entity work.controle_estados
 			port map (
-				clock => clock,
+		  clock => clock,
         reset => reset,
         sensor_porta => sensor_porta,
         sensor_incendio => sensor_incendio,

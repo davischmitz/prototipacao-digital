@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.syr" 
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.syr" 
+xst -intstyle ise -ifn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.xst" -ofn "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador.syr" 

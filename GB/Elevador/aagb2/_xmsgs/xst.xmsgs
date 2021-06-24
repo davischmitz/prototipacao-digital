@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd</arg>&quot; Line <arg fmt="%d" index="2">178</arg>. <arg fmt="%s" index="3">parse error, unexpected IDENTIFIER, expecting THEN</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="802" delta="new" >&quot;<arg fmt="%s" index="1">D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd</arg>&quot; Line <arg fmt="%d" index="2">173</arg>. <arg fmt="%s" index="3">btn_andar_2</arg> is not a boolean expression.
-</msg>
-
 </messages>
 

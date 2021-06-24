@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Prototipacao Digital/prototipacao-digital/GB/Elevador/aagb2/controle_estados.vhd";
+static const char *ng0 = "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/controle_estados.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_1605435078_503743352(char *, unsigned char , unsigned char );
@@ -395,7 +395,7 @@ LAB3:    t1 = (t0 + 7880);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(111, ng0);
-    t1 = (t0 + 13286);
+    t1 = (t0 + 13058);
     t6 = (t0 + 8408);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
@@ -430,7 +430,7 @@ LAB7:    t2 = (t0 + 1192U);
 LAB10:    goto LAB3;
 
 LAB11:    xsi_set_current_line(116, ng0);
-    t7 = (t0 + 13289);
+    t7 = (t0 + 13061);
     t9 = (t0 + 8408);
     t10 = (t9 + 56U);
     t14 = *((char **)t10);
@@ -463,7 +463,7 @@ LAB19:    xsi_set_current_line(126, ng0);
 LAB18:    goto LAB10;
 
 LAB12:    xsi_set_current_line(130, ng0);
-    t1 = (t0 + 13292);
+    t1 = (t0 + 13064);
     t5 = (t0 + 8408);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -496,7 +496,7 @@ LAB34:    xsi_set_current_line(143, ng0);
 LAB33:    goto LAB10;
 
 LAB13:    xsi_set_current_line(147, ng0);
-    t1 = (t0 + 13295);
+    t1 = (t0 + 13067);
     t5 = (t0 + 8408);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -529,7 +529,7 @@ LAB57:    xsi_set_current_line(157, ng0);
 LAB56:    goto LAB10;
 
 LAB14:    xsi_set_current_line(161, ng0);
-    t1 = (t0 + 13298);
+    t1 = (t0 + 13070);
     t5 = (t0 + 8408);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -557,7 +557,7 @@ LAB72:    xsi_set_current_line(174, ng0);
 LAB71:    goto LAB10;
 
 LAB15:    xsi_set_current_line(178, ng0);
-    t1 = (t0 + 13301);
+    t1 = (t0 + 13073);
     t5 = (t0 + 8408);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -585,7 +585,7 @@ LAB89:    xsi_set_current_line(190, ng0);
 LAB88:    goto LAB10;
 
 LAB16:    xsi_set_current_line(194, ng0);
-    t1 = (t0 + 13304);
+    t1 = (t0 + 13076);
     t5 = (t0 + 8408);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);

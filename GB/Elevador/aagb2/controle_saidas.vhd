@@ -2,9 +2,9 @@
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
 -- DESIGN NAME  : controle_saidas.vhd
 -- NAME         : 
--- PROJECT      : Elevador de tr�s pavimentos
+-- PROJECT      : Elevador de tres pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Implementa��o atrav�s do uso de m�quina de estado de Moore e com uso de descri��o de HW estrutural, o projeto de controle de um fsm de tr�s andares
+-- FINALITY     : Controle de saidas 
 -- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------

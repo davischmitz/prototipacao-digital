@@ -2,9 +2,9 @@
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
 -- DESIGN NAME  : controle_estados.vhd
 -- NAME         : 
--- PROJECT      : Elevador de tr�s pavimentos
+-- PROJECT      : Elevador de tres pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
--- FINALITY     : Implementa��o atrav�s do uso de m�quina de estado de Moore e com uso de descri��o de HW estrutural, o projeto de controle de um fsm de tr�s andares
+-- FINALITY     : Modulo que decide se pode trocar de um estado para o outro
 -- DEPENDENCIES : 
 
 --------------------------------------------------------------------------------
@@ -24,19 +24,20 @@ entity controle_estados is
 --Declaracao das entradas e saidas---------------------------------------------
   port (
     clock		            : IN std_logic;
-	  reset						: IN std_logic;
+	 reset						: IN std_logic;
     sensor_porta           : IN std_logic;
     sensor_incendio        : IN std_logic;
     btn_emergencia         : IN std_logic;
-    FC1                    : IN std_logic;
-    FC2                    : IN std_logic;
-    FC3                    : IN std_logic;
+    FC1                    : IN std_logic; -- Fim de curso do andar 1 
+    FC2                    : IN std_logic; -- Fim de curso do andar 2
+    FC3                    : IN std_logic; -- Fim de curso do andar 3
     btn_andar_1_interno    : IN std_logic;
     btn_andar_1_externo    : IN std_logic;
     btn_andar_2_interno    : IN std_logic;
     btn_andar_2_externo    : IN std_logic;
     btn_andar_3_interno    : IN std_logic;
     btn_andar_3_externo    : IN std_logic;
+	 
     saida_estado           : OUT std_logic_vector(2 downto 0)
   );
 end controle_estados;
@@ -110,7 +111,7 @@ begin
 	  if reset = '1' then
       saida_estado <= "000";
 		  estado <= ANDAR1;
-    elsif rising_edge(clock) and reset = '0' then --rising_edge � s� pra usar a borda de subida de clock pra trocar os estados
+    elsif rising_edge(clock) and reset = '0' then --rising_edge para usar a borda de subida de clock pra trocar os estados
       case estado is
         when ANDAR1 =>
           saida_estado <= "000";
