@@ -111,7 +111,7 @@ ARCHITECTURE behavior OF elevador_tb IS
 
    -- Clock period definitions
 	constant C_period       : time := 13 ns; 
-	constant tempo_processo : time := 50 ns; --14
+	constant tempo_processo : time := 28 ns;
  
 BEGIN
  

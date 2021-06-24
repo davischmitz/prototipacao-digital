@@ -40,7 +40,7 @@ entity controle_estados is
     btn_andar_3_externo    : IN std_logic;
 	 
 	 --Outputs
-    saida_estado           : OUT std_logic_vector(2 downto 0) -- a saada do modulo e um vetor com saidas de 3 bits
+    saida_estado           : OUT std_logic_vector(2 downto 0) -- a saida do modulo e um vetor com saidas de 3 bits
 										-- saida_estado 
 										-- 000 ANDAR1
 										-- 001 ANDAR2

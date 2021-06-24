@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="-iqM8rC-7A34NJt66M_C" name="Page-1">
-        <mxGraphModel dx="1945" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2424" dy="2282" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,7 +31,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="JEFxncGDEQIBqT9fs3Xw-17" value="" style="endArrow=classic;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JEFxncGDEQIBqT9fs3Xw-2" edge="1" target="JEFxncGDEQIBqT9fs3Xw-6">
+                <mxCell id="JEFxncGDEQIBqT9fs3Xw-17" value="" style="endArrow=classic;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JEFxncGDEQIBqT9fs3Xw-2" target="JEFxncGDEQIBqT9fs3Xw-6" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="340" y="250" as="sourcePoint"/>
                         <mxPoint x="370" y="340" as="targetPoint"/>
@@ -213,6 +213,24 @@
                         <Array as="points">
                             <mxPoint x="754" y="750"/>
                         </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="shape=flexArrow;endArrow=classic;html=1;strokeWidth=3;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-10" y="540" as="sourcePoint"/>
+                        <mxPoint x="-10" y="790" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="&lt;font face=&quot;arial&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;&lt;b&gt;Sensor de Porta, Sensor de incêndio, Botão de emergência, Fim de curso do andar 1, Fim de curso do andar 2, Fim de curso do andar 3, Botão andar 1, Botão andar 2, Botão andar 3&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;strokeColor=#000000;glass=0;fillColor=#ffffff;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="-150" y="800" width="600" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;glass=0;fillColor=#ffffff;strokeWidth=3;strokeColor=#CC441B;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="-80" width="600" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="shape=flexArrow;endArrow=classic;html=1;strokeWidth=3;strokeColor=#CC441B;fillColor=#ffffff;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" as="sourcePoint"/>
+                        <mxPoint x="610" y="180" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>

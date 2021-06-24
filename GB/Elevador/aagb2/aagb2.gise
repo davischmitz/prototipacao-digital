@@ -51,7 +51,7 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="elevador_envsettings.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="elevador_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="elevador_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="elevador_tb_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="elevador_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="elevador_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="elevador_tb_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="elevador_tb_stx_beh.prj"/>
@@ -83,7 +83,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1624567910" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1624567910">
+    <transform xil_pn:end_ts="1624572265" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1624572265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="controle_estados.vhd"/>
@@ -91,42 +91,29 @@
       <outfile xil_pn:name="elevador.vhd"/>
       <outfile xil_pn:name="elevador_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1624507347" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7990275570910430531" xil_pn:start_ts="1624507347">
+    <transform xil_pn:end_ts="1624572137" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7990275570910430531" xil_pn:start_ts="1624572137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1624507347" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3286640142701962751" xil_pn:start_ts="1624507347">
+    <transform xil_pn:end_ts="1624572137" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3286640142701962751" xil_pn:start_ts="1624572137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1624420757" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3265518828808954002" xil_pn:start_ts="1624420757">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1624507347" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1624507347">
+    <transform xil_pn:end_ts="1624572265" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1624572265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="controle_estados.vhd"/>
       <outfile xil_pn:name="controle_saidas.vhd"/>
       <outfile xil_pn:name="elevador.vhd"/>
       <outfile xil_pn:name="elevador_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1624507354" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5741788398288801060" xil_pn:start_ts="1624507347">
+    <transform xil_pn:end_ts="1624572270" xil_pn:in_ck="3724757725927185835" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5741788398288801060" xil_pn:start_ts="1624572265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="elevador_tb_beh.prj"/>
       <outfile xil_pn:name="elevador_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -134,13 +121,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1624507399" xil_pn:in_ck="-512707527279447258" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3155473994325837929" xil_pn:start_ts="1624507399">
+    <transform xil_pn:end_ts="1624572270" xil_pn:in_ck="-512707527279447258" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3155473994325837929" xil_pn:start_ts="1624572270">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="elevador_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -176,8 +159,11 @@
     <transform xil_pn:end_ts="1624567873" xil_pn:in_ck="4954792090665101108" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6290955165982855983" xil_pn:start_ts="1624567859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="controle_estados.ngr"/>
@@ -189,7 +175,6 @@
       <outfile xil_pn:name="elevador.syr"/>
       <outfile xil_pn:name="elevador.xst"/>
       <outfile xil_pn:name="elevador_stx_beh.prj"/>
-      <outfile xil_pn:name="elevador_tb_beh.prj"/>
       <outfile xil_pn:name="elevador_tb_stx_beh.prj"/>
       <outfile xil_pn:name="elevador_vhdl.prj"/>
       <outfile xil_pn:name="elevador_xst.xrpt"/>

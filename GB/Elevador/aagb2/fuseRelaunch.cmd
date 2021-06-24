@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador_tb_isim_beh.exe" -prj "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador_tb_beh.prj" "work.elevador_tb" 
+-intstyle "ise" -incremental -o "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador_tb_isim_beh.exe" -prj "C:/unisinos/prototipacao-digital-ga-1/GB/Elevador/aagb2/elevador_tb_beh.prj" "elevador_tb" 
