@@ -73,7 +73,7 @@ architecture elevador of elevador is
 	-----------------------------------
 	-- Declaracoes de sinais
 	-----------------------------------
-  signal estado_aux: std_logic_vector(2 downto 0);
+  signal estado_aux: std_logic_vector(2 downto 0); --3 bits, vetor recebe valor da saida_estado e entrada_estado
 	
 begin
 	------------------
