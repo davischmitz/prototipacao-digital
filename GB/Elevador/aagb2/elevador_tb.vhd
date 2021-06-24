@@ -149,9 +149,9 @@ BEGIN
    -- Clock process definitions
    clock_process :process
    begin
-		clock <= '0';
+		clock <= '0'; -- borda de descida
 		wait for C_period/2; --13/2, então fica em espera por 6.5s
-		clock <= '1';
+		clock <= '1'; --borda de subida (rising edge)
 		wait for C_period/2; --13/2, então fica em espera por 6.5s
    end process;
  
@@ -167,7 +167,7 @@ BEGIN
       -- Elevador no primeiro andar, chamado nos andares 2 e 3
       sensor_porta <= '1'; -- nível lógico alto se refere a porta travada, fechada
 		sensor_incendio <= '1'; -- sensor de incêndio não está ativo
-		btn_emergencia <= '1'; -- botão de emergência não está ativo
+		btn_emergencia <= '1'; -- botao de emergência não está ativo
 		FC1 <= '1'; -- nível lógico alto pois o elevador está no primeiro andar
 		FC2 <= '0'; -- nível baixo pois o elevador não está no segundo andar
 		FC3 <= '0'; -- nível baixo pois o elevador não está no terceiro andar

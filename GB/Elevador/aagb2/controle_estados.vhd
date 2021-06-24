@@ -25,12 +25,12 @@ entity controle_estados is
   port (
     clock		            : IN std_logic;
 	 reset						: IN std_logic;
-    sensor_porta           : IN std_logic;
-    sensor_incendio        : IN std_logic;
-    btn_emergencia         : IN std_logic;
-    FC1                    : IN std_logic; -- Fim de curso do andar 1 
-    FC2                    : IN std_logic; -- Fim de curso do andar 2
-    FC3                    : IN std_logic; -- Fim de curso do andar 3
+    sensor_porta           : IN std_logic; -- seguranca ok: nivel logico alto se refere a porta travada, fechada
+    sensor_incendio        : IN std_logic; -- seguranca ok: nivel logico alto se refere a sensor de incendio não ativo
+    btn_emergencia         : IN std_logic; -- seguranca ok: nivel logico alto se refere a botao de emergencia não ativo
+    FC1                    : IN std_logic; -- Fim de curso do andar 1: nível lógico alto
+    FC2                    : IN std_logic; -- Fim de curso do andar 2: nível lógico alto
+    FC3                    : IN std_logic; -- Fim de curso do andar 3: nível lógico alto
     btn_andar_1_interno    : IN std_logic;
     btn_andar_1_externo    : IN std_logic;
     btn_andar_2_interno    : IN std_logic;
@@ -38,7 +38,7 @@ entity controle_estados is
     btn_andar_3_interno    : IN std_logic;
     btn_andar_3_externo    : IN std_logic;
 	 
-    saida_estado           : OUT std_logic_vector(2 downto 0)
+    saida_estado           : OUT std_logic_vector(2 downto 0) -- 3 bits
   );
 end controle_estados;
 
@@ -49,7 +49,7 @@ architecture controle_estados of controle_estados is
 	-----------------------------------
 	-- Tipos 
 	-----------------------------------
-  TYPE State_type IS (ANDAR1, ANDAR2, ANDAR3, SUBINDO, DESCENDO, EMERGENCIA); -- Tipo Enumerado para definir os Estados
+  TYPE State_type IS (ANDAR1, ANDAR2, ANDAR3, SUBINDO, DESCENDO, EMERGENCIA); -- Tipo Enumerado para definir os Estados da FSM
 	
 	-----------------------------------
 	-- Constantes
@@ -63,13 +63,13 @@ architecture controle_estados of controle_estados is
 	-----------------------------------
 	-- Declaracoes de sinais
 	-----------------------------------
-  signal estado: State_type;
+  signal estado: State_type; -- inicializacao do sinal estado com os estados da FSM
 
   signal btn_andar_1: std_logic := '0';
   signal btn_andar_2: std_logic := '0';
   signal btn_andar_3: std_logic := '0';
 
-  signal checklist_seguranca: std_logic := '0';
+  signal checklist_seguranca: std_logic := '0'; -- sinal para verificacoes de seguranca: sensor_porta, sensor_incendio e btn_emergencia tem que estar em um, ou seja, situacao segura para uso do elevador 
 
   signal fins_de_curso_andar_1: std_logic := '0';
   signal fins_de_curso_andar_2: std_logic := '0';
@@ -91,9 +91,9 @@ begin
 
   checklist_seguranca <= sensor_porta and sensor_incendio and btn_emergencia;
   
-  fins_de_curso_andar_1  <= FC1 and (not FC2) and (not FC3);
-  fins_de_curso_andar_2  <= (not FC1) and FC2 and (not FC3);
-  fins_de_curso_andar_3  <= (not FC1) and (not FC2) and FC3;
+  fins_de_curso_andar_1  <= FC1 and (not FC2) and (not FC3); --so o fim de curso no andar de 1 ativo
+  fins_de_curso_andar_2  <= (not FC1) and FC2 and (not FC3); --so o fim de curso no andar de 2 ativo
+  fins_de_curso_andar_3  <= (not FC1) and (not FC2) and FC3; --so o fim de curso no andar de 3 ativo
   
 	---------------
 	-- Processos --
