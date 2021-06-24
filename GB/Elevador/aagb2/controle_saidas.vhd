@@ -23,14 +23,17 @@ entity controle_saidas is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
+	 --Inputs
     entrada_estado          : IN std_logic_vector(2 downto 0); -- recebe valor do vetor de saida do modulo de controle_estados de 3 bits
-    motor_subindo           : OUT std_logic;
-    motor_descendo          : OUT std_logic;
-    indicador_andar_1       : OUT std_logic;
-    indicador_andar_2       : OUT std_logic;
-    indicador_andar_3       : OUT std_logic;
-    indicador_subindo       : OUT std_logic;
-    indicador_descendo      : OUT std_logic;
+    
+	 --Outputs
+	 motor_subindo           : OUT std_logic; -- Estado do motor subindo
+    motor_descendo          : OUT std_logic; -- Estado do motor descendo
+    indicador_andar_1       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 1 andar
+    indicador_andar_2       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 2 andar
+    indicador_andar_3       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 3 andar
+    indicador_subindo       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver subindo
+    indicador_descendo      : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver descendo
     alarme_emergencia       : OUT std_logic;
     trava_porta             : OUT std_logic
   );

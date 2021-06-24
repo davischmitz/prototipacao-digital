@@ -23,6 +23,7 @@ entity controle_estados is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
+    --Inputs
     clock		            : IN std_logic;
 	 reset						: IN std_logic;
     sensor_porta           : IN std_logic; -- seguranca ok: nivel logico alto se refere a porta travada, fechada
@@ -38,6 +39,7 @@ entity controle_estados is
     btn_andar_3_interno    : IN std_logic;
     btn_andar_3_externo    : IN std_logic;
 	 
+	 --Outputs
     saida_estado           : OUT std_logic_vector(2 downto 0) -- a saada do modulo e um vetor com saidas de 3 bits
 										-- saida_estado 
 										-- 000 ANDAR1
@@ -195,7 +197,7 @@ begin
               estado <= DESCENDO;
             end if;
           else 
-            estado <=EMERGENCIA;
+            estado <= EMERGENCIA;
           end if;
 
         when EMERGENCIA => 

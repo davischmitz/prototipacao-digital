@@ -45,29 +45,35 @@ ARCHITECTURE behavior OF elevador_tb IS
  
     COMPONENT elevador
     PORT(
+			--Inputs
          clock               : IN  std_logic;
 			reset               : IN  std_logic;
-         sensor_porta        : IN  std_logic;
+			sensor_porta        : IN  std_logic;
          sensor_incendio     : IN  std_logic;
          btn_emergencia      : IN  std_logic;
-         FC1                 : IN  std_logic;
-         FC2                 : IN  std_logic;
-         FC3                 : IN  std_logic;
-         btn_andar_1_interno : IN  std_logic;
-         btn_andar_1_externo : IN  std_logic;
-         btn_andar_2_interno : IN  std_logic;
-         btn_andar_2_externo : IN  std_logic;
-         btn_andar_3_interno : IN  std_logic;
-         btn_andar_3_externo : IN  std_logic;
+			--Fim de curso
+         FC1                 : IN  std_logic; -- Fim de curso do andar 1
+         FC2                 : IN  std_logic; -- Fim de curso do andar 2
+         FC3                 : IN  std_logic; -- Fim de curso do andar 3
+			--Botoes para chamada do elevador
+         btn_andar_1_interno : IN std_logic; -- botao interno do andar 1
+         btn_andar_1_externo : IN std_logic; -- botao externo do andar 1
+         btn_andar_2_interno : IN std_logic; -- botao interno do andar 2
+         btn_andar_2_externo : IN std_logic; -- botao externo do andar 2
+         btn_andar_3_interno : IN std_logic; -- botao interno do andar 3
+         btn_andar_3_externo : IN std_logic; -- botao externo do andar 3
 
+			--Outputs
          motor_subindo       : OUT std_logic;
          motor_descendo      : OUT std_logic;
-         indicador_andar_1   : OUT std_logic;
-         indicador_andar_2   : OUT std_logic;
-         indicador_andar_3   : OUT std_logic;
-         indicador_subindo   : OUT std_logic;
-         indicador_descendo  : OUT std_logic;
-         alarme_emergencia   : OUT std_logic;
+			--Indicadores andar
+         indicador_andar_1   : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 1 andar
+         indicador_andar_2   : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 2 andar
+         indicador_andar_3   : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 3 andar
+         indicador_subindo   : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver subindo
+         indicador_descendo  : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver descendo
+			--Seguranca
+         alarme_emergencia   : OUT std_logic; -- nível lógico alto, '1', quando estiver em emergencia
          trava_porta         : OUT std_logic
         );
     END COMPONENT;
