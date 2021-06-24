@@ -38,7 +38,14 @@ entity controle_estados is
     btn_andar_3_interno    : IN std_logic;
     btn_andar_3_externo    : IN std_logic;
 	 
-    saida_estado           : OUT std_logic_vector(2 downto 0) -- 3 bits
+    saida_estado           : OUT std_logic_vector(2 downto 0) -- a saída do modulo e um vetor com saidas de 3 bits
+										-- saida_estado 
+										-- 000 ANDAR1
+										-- 001 ANDAR2
+										-- 010 ANDAR3
+										-- 100 SUBINDO
+										-- 101 DESCENDO
+										-- 110 EMERGENCIA
   );
 end controle_estados;
 
@@ -108,9 +115,10 @@ begin
           btn_andar_2, 
           btn_andar_3)
   begin
-	  if reset = '1' then
+	 if reset = '1' then -- ao ativar o reset, o estado andar1 fica ativo  
       saida_estado <= "000";
-		  estado <= ANDAR1;
+		estado <= ANDAR1;
+	 --se o clock estiver na borda de subida e o reset nao estiver ativo
     elsif rising_edge(clock) and reset = '0' then --rising_edge para usar a borda de subida de clock pra trocar os estados
       case estado is
         when ANDAR1 =>
@@ -119,9 +127,9 @@ begin
           if (checklist_seguranca = '1' and fins_de_curso_andar_1 = '1') then
             -- subindo
             if ((btn_andar_1 = '0') and ((btn_andar_2 = '1') or (btn_andar_3 = '1'))) then
-              estado <= SUBINDO;
+              estado <= SUBINDO; -- elevador foi chamado no andar 2 ou 3
             else 
-              estado <= ANDAR1;
+              estado <= ANDAR1; -- permanece no mesmo estado
             end if;
           else 
               estado <= EMERGENCIA;
@@ -133,7 +141,7 @@ begin
           if (checklist_seguranca = '1' and fins_de_curso_andar_2 = '1') then
             -- subindo
             if ((btn_andar_1 = '0') and btn_andar_2 = '0' and btn_andar_3 = '1') then
-              estado <= SUBINDO;
+              estado <= SUBINDO;  -- elevador foi chamado no andar 3
             -- descendo
             elsif (btn_andar_1 = '1' and btn_andar_2 = '0' and btn_andar_3 = '0') then
               estado <= DESCENDO;

@@ -46,7 +46,7 @@ entity elevador is
     indicador_subindo       : OUT std_logic;
     indicador_descendo      : OUT std_logic;
     alarme_emergencia       : OUT std_logic; -- Alarme de emergencia
-    trava_porta             : OUT std_logic -- Medida de seguranca
+    trava_porta             : OUT std_logic  -- Medida de seguranca
   );
 end elevador;
 

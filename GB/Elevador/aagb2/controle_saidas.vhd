@@ -23,7 +23,7 @@ entity controle_saidas is
   
 --Declaracao das entradas e saidas---------------------------------------------
   port (
-    entrada_estado          : IN std_logic_vector(2 downto 0);
+    entrada_estado          : IN std_logic_vector(2 downto 0); -- recebe valor do vetor de saída do modulo de controle_estados de 3 bits
     motor_subindo           : OUT std_logic;
     motor_descendo          : OUT std_logic;
     indicador_andar_1       : OUT std_logic;
@@ -73,33 +73,33 @@ begin
   process(entrada_estado)
   begin
     -- default values
-    motor_subindo <= '0';
-    motor_descendo <= '0';
-    indicador_andar_1 <= '0';
-    indicador_andar_2 <= '0';
-    indicador_andar_3 <= '0';
-    indicador_subindo <= '0';
+    motor_subindo      <= '0';
+    motor_descendo     <= '0';
+    indicador_andar_1  <= '0';
+    indicador_andar_2  <= '0';
+    indicador_andar_3  <= '0';
+    indicador_subindo  <= '0';
     indicador_descendo <= '0';
-    alarme_emergencia <= '0';
-    trava_porta <= '1'; -- porta travada por default
+    alarme_emergencia  <= '0';
+    trava_porta        <= '1'; -- porta travada por default
 
 	  case entrada_estado is
-      when "000" => 
+      when "000" => -- ANDAR1
         indicador_andar_1 <= '1';
         trava_porta <= '0';
-      when "001" =>
+      when "001" => -- ANDAR2
         indicador_andar_2 <= '1';
         trava_porta <= '0';
-      when "010" => 
+      when "010" => -- ANDAR3
         indicador_andar_3 <= '1';
         trava_porta <= '0';
-      when "100" =>
+      when "100" => -- SUBINDO
         indicador_subindo <= '1';
         motor_subindo <= '1';
-      when "101" =>
+      when "101" => -- DESCENDO
         indicador_descendo <= '1';
         motor_descendo <= '1';
-      when "110" =>
+      when "110" => -- EMERGENCIA
         alarme_emergencia <= '1';
 	   when others =>
 		  alarme_emergencia <= '1';
