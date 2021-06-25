@@ -171,7 +171,7 @@ BEGIN
 		wait for tempo_processo;
 		reset <= '0';
 		
-      -- Elevador no primeiro andar, chamado nos andares 2 e 3
+      -- 1) Elevador no primeiro andar, chamado nos andares 2 e 3
 		--Primeiro andar para o subindo: 111100001000 OR 111100000001
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
 		sensor_incendio     <= '1'; -- sensor de incêndio não está ativo
@@ -189,7 +189,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--56s
-      -- Elevador no segundo andar, chamado no andar 3
+      -- 2) Elevador no segundo andar, chamado no andar 3
 		-- Segundo andar para o subindo: 11101000001
 		sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
 		sensor_incendio     <= '1'; -- sensor de incêndio não está ativo
@@ -207,8 +207,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--84s
-      -- Elevador no 3 andar
-		-- Subindo para o Terceiro andar: 111001000001
+      -- 3) Elevador subindo para o Terceiro andar: 111001000001
 		sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
 		sensor_incendio     <= '1';
 		btn_emergencia      <= '1';
@@ -225,7 +224,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--112s
-      -- Elevador no 3 andar chamado no andar 1
+      -- 4) Elevador no 3 andar chamado no andar 1
 		-- Terceiro andar para o descida : 111001100000
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
       sensor_incendio     <= '1';
@@ -243,7 +242,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--140
-      -- Elevador no 2 andar chamado no andar 1
+      -- 5) Elevador no 2 andar chamado no andar 1 : 111010100000
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
       sensor_incendio     <= '1';
       btn_emergencia      <= '1';
@@ -260,7 +259,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--168
-      -- Elevador no 1 andar
+      -- 6) Elevador descendo para o Andar1: 111100100000
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
       sensor_incendio     <= '1';
       btn_emergencia      <= '1';
@@ -277,7 +276,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--196
-      --Emergencia por 2 fins de curso ativos simultaneamente
+      --7) Emergencia por 2 fins de curso ativos simultaneamente: 111110100000
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
       sensor_incendio     <= '1';
       btn_emergencia      <= '1';
@@ -294,7 +293,7 @@ BEGIN
 		--espera por tempo_processo s
 		wait for tempo_processo;
 		--224
-      --Botao de emergencia pressionado
+      --8) Botao de emergencia pressionado: 110100100000
       sensor_porta        <= '1'; -- nível lógico alto se refere a porta travada, fechada
       sensor_incendio     <= '1';
       btn_emergencia      <= '0';
