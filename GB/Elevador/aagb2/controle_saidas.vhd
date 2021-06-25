@@ -29,11 +29,11 @@ entity controle_saidas is
 	 --Outputs
 	 motor_subindo           : OUT std_logic; -- Estado do motor subindo
     motor_descendo          : OUT std_logic; -- Estado do motor descendo
-    indicador_andar_1       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 1 andar
-    indicador_andar_2       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 2 andar
-    indicador_andar_3       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 3 andar
-    indicador_subindo       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver subindo
-    indicador_descendo      : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver descendo
+    indicador_andar_1       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 1 andar
+    indicador_andar_2       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 2 andar
+    indicador_andar_3       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 3 andar
+    indicador_subindo       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver subindo
+    indicador_descendo      : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver descendo
     alarme_emergencia       : OUT std_logic;
     trava_porta             : OUT std_logic
   );
@@ -107,7 +107,7 @@ begin
         motor_descendo <= '1';
       when "110" => -- EMERGENCIA
         alarme_emergencia <= '1';
-	   when others => -- por precaucao tambem contemplamos esse estado
+	   when others => -- estados nao contemplados anteriormente sao considerados invalidos, emergencia Ã© acionada
 		  alarme_emergencia <= '1';
     end case;
   end process;

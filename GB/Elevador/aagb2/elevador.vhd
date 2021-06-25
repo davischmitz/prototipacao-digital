@@ -28,7 +28,7 @@ entity elevador is
 	 reset						 : IN std_logic;
     sensor_porta            : IN std_logic; -- Sensor de porta (aberta/fechada)
     sensor_incendio         : IN std_logic; -- Sensor de incendio
-    btn_emergencia          : IN std_logic; -- Botão de emergencia
+    btn_emergencia          : IN std_logic; -- Botï¿½o de emergencia
     FC1                     : IN std_logic; -- Fim de curso do andar 1
     FC2                     : IN std_logic; -- Fim de curso do andar 2
     FC3                     : IN std_logic; -- Fim de curso do andar 3
@@ -42,12 +42,12 @@ entity elevador is
 	 --Outputs
     motor_subindo           : OUT std_logic; -- Estado do motor subindo
     motor_descendo          : OUT std_logic; -- Estado do motor descendo
-    indicador_andar_1       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 1 andar
-    indicador_andar_2       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 2 andar
-    indicador_andar_3       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver no 3 andar
-    indicador_subindo       : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver subindo
-    indicador_descendo      : OUT std_logic; -- nível lógico alto, '1', quando o elevador estiver descendo
-    alarme_emergencia       : OUT std_logic; -- Alarme de emergencia,nível lógico alto, '1', quando estiver em emergencia
+    indicador_andar_1       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 1 andar
+    indicador_andar_2       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 2 andar
+    indicador_andar_3       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver no 3 andar
+    indicador_subindo       : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver subindo
+    indicador_descendo      : OUT std_logic; -- nï¿½vel lï¿½gico alto, '1', quando o elevador estiver descendo
+    alarme_emergencia       : OUT std_logic; -- Alarme de emergencia,nï¿½vel lï¿½gico alto, '1', quando estiver em emergencia
     trava_porta             : OUT std_logic  -- Medida de seguranca, porta fica travada por default
   );
 end elevador;
@@ -73,7 +73,8 @@ architecture elevador of elevador is
 	-----------------------------------
 	-- Declaracoes de sinais
 	-----------------------------------
-  signal estado_aux: std_logic_vector(2 downto 0); --3 bits, vetor recebe valor da saida_estado e entrada_estado
+  signal estado_aux: std_logic_vector(2 downto 0); --3 bits, vetor armazena a valor correspondente a cada estado, servindo de conexao entre as
+  -- instancias de controle_estados e controle_saidas
 	
 begin
 	------------------
