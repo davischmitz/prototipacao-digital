@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- UNISINOS - Universidade do Vale do Rio dos Sinos 
 -- DESIGN NAME  : elevador.vhd
--- NAME         : 
+-- NAME         : TOP LEVEL
 -- PROJECT      : Elevador de tres pavimentos
 -- AUTHOR       : Aline Nunes e Davi Schmitz
 -- FINALITY     : Implementar atraves do uso de maquina de estado de Moore e com uso de descricao de HW estrutural, o projeto de controle de um fsm de tres andares
